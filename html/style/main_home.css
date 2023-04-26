@@ -1,0 +1,140 @@
+/*main - home*/
+.welcome{
+    position: relative;
+    float: right;
+    margin: -45px 0px 0px 0px;
+    background-color: white;
+    height: 538px;
+    width: calc(100vw - 90px);
+    box-shadow: -3px 5px 7px rgb(180, 180, 180);
+}
+#sebastiao{
+    width: 312px;
+    height: 396px;
+}
+#sobre_sebastiao{
+    padding-right: 60px !important;
+    width: calc(100vw - 95px - 432px) !important;
+    height: 538px;
+}
+#sobre_sebastiao h3{
+    margin-top: 80px;
+    font-size: 25px;
+    color: #4D4D4D;
+    text-transform: uppercase;
+}
+#sobre_sebastiao a{
+    align-self: flex-end;
+    margin-top: 40px;
+}
+#sobre_sebastiao p{
+    margin-top: 30px;
+    text-align: left;
+}
+.welcome > .caixa-imagem{
+    width: 432px !important;
+    padding: 60px 35px 60px 60px !important;
+}
+.colecao_livros{
+    padding-top: 85px;
+    margin-left: 90px;
+    width: calc(100vw - 180px);
+}
+#sobre_lirvos{
+    text-align: left;
+    margin-top: 23px;
+}
+#sesao_cartas{
+    margin: auto;
+    margin-top: 70px;
+    padding-bottom: 106px;
+    max-width: calc(1280px - 110px);
+    width: calc(100vw - 110px);
+}
+.card{
+    height: 700px;
+    box-shadow: 3px 5px 7px rgb(180, 180, 180);
+}
+.card-body > h3{
+    margin-top: 30px;
+}
+.card-body > p{
+    margin-top: 10px;
+}
+.card-body > a{
+    position: relative;
+    float: right;
+    margin-right: 2px;
+    margin-top: 15px;
+}
+/* fim do main-home
+                            sm:576px
+*/
+@media all and (max-width: 992px){
+    /*main - home*/
+    .welcome{
+        float: none;
+        margin: 0px 0px 0px 0px;
+        height: fit-content;
+        width: 100vw;
+        padding: 73px 35px 60px 35px !important;
+    }
+    .welcome > .caixa-imagem{
+        width: 100% !important;
+        padding: 0px !important;
+        text-align: center;
+    }
+    #sebastiao{
+        margin: auto;
+        width: 100%;
+        max-width: 286px;
+        height: 396px;
+    }
+    #sobre_sebastiao{
+        padding-right: 0px !important;
+        width: fit-content !important;
+        height: fit-content !important;
+    }
+    #sobre_sebastiao h3{
+        margin-top: 35px;
+    }
+    #sobre_sebastiao p{
+        margin-top: 20px;
+    }
+    #sobre_sebastiao > a{
+        align-self: center;
+    }
+    .colecao_livros{
+        padding: 40px 35px 0px 35px;
+        margin-left: 0px;
+        width: 100%;
+    }
+    #sobre_lirvos{
+        text-align: left;
+        margin-top: 20px;
+    }
+    #sesao_cartas{
+        padding: 0px 35px 0px 35px;
+        margin-top: 43px;
+        padding-bottom: 60px;
+        width: 100vw;
+    }
+    .card-body{
+        padding: 0px 25px;
+    }
+    .card-body > h5{
+        margin-top: 30px;
+        margin-bottom: 0px;
+        font-size: 23px;
+    }
+    .card-body > p{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .card-body > a{
+        position: relative;
+        float: right;
+        margin-right: 2px;
+        margin-top: 15px;
+    }
+} 

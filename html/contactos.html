@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contactos</title>
+        <!-- CSS do Bootstrap 5.3-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!--CSS proprio-->
+        <link rel="stylesheet" href="style/footer_header.css">
+        <link rel="stylesheet" href="style/contactos.css">
+    </head>
+
+    <body>
+        <header class="container-fluid p-0 d-flex justify-content-center">
+            <!--Carousel lg-->
+            <div id="carouselExampleCaptions" class="carousel slide d-none d-sm-block" data-bs-ride="carousel">
+                <div class="carousel-indicators col-6 col-sm-4 col-md-3 d-flex flex-start">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="imagens_para_site/desktop/cabecalho1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption carousel-legenda d-none d-md-block col-5">
+                        <p class="banner">Novidade</p>
+                        <h5 class="banner-titulo">Senhora do amor e da guerra</h5>
+                        <p class="banner-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quasi ipsam optio vero totam, inventore porro, obcaecati accusantium ipsum distinctio tempore mollitia ex natus accusamus libero harum pariatur unde molestias maiores possimus ea quibusdam odit? Recusandae distinctio numquam ducimus ullam!</p>
+                        <button class="p-0 botoes"></button>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imagens_para_site/desktop/cabecalho2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption carousel-legenda nao_novidade d-none d-md-block col-5">
+                        <h5 class="banner-titulo">O caracol estrábico</h5>
+                        <p class="banner-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quasi ipsam optio vero totam, inventore porro, obcaecati accusantium ipsum distinctio tempore mollitia ex natus accusamus libero harum pariatur unde molestias maiores possimus ea quibusdam odit? Recusandae distinctio numquam ducimus ullam!</p>
+                        <button class="p-0 botoes"></button>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="imagens_para_site/desktop/cabecalho3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption carousel-legenda nao_novidade d-none d-md-block col-5">
+                        <h5 class="banner-titulo">O coleccionador de amnésias</h5>
+                        <p class="banner-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quasi ipsam optio vero totam, inventore porro, obcaecati accusantium ipsum distinctio tempore mollitia ex natus accusamus libero harum pariatur unde molestias maiores possimus ea quibusdam odit? Recusandae distinctio numquam ducimus ullam!</p>
+                        <button class="p-0 botoes"></button>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="imagens_para_site/desktop/cabecalho4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption carousel-legenda nao_novidade d-none d-md-block col-5">
+                        <h5 class="banner-titulo">O velho que pensava que fugia</h5>
+                        <p class="banner-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quasi ipsam optio vero totam, inventore porro, obcaecati accusantium ipsum distinctio tempore mollitia ex natus accusamus libero harum pariatur unde molestias maiores possimus ea quibusdam odit? Recusandae distinctio numquam ducimus ullam!</p>
+                        <button class="p-0 botoes"></button>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+
+            <!--Carousel sm-->
+            <div id="carouselExampleCaptions" class="carousel_pequeno carousel slide d-block d-sm-none" data-bs-ride="carousel">
+                <div class="carousel-indicators carousel-indicators-sm col-10 d-flex justify-content-start p-0">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner d-flex">
+                    <div class="carousel-item active d-flex justify-content-center align-items-center">
+                        <img class="carousel_pequeno_img" src="imagens_para_site/mobile/cabecalho1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption carousel-pequeno-legenda col-10">
+                            <p class="banner">Novidade</p>
+                            <h5 class="banner-titulo">Senhora do amor e da guerra</h5>
+                            <p class="banner-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quasi ipsam optio vero totam, inventore porro, obcaecati accusantium ipsum distinctio tempore mollitia ex natus accusamus libero harum pariatur unde molestias maiores possimus ea quibusdam odit? Recusandae distinctio numquam ducimus ullam!</p>
+                            <button class="p-0 botoes"></button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class="carousel_pequeno_img" src="imagens_para_site/mobile/cabecalho2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption carousel-pequeno-legenda col-10 nao_novidade_pequeno">
+                            <h5 class="banner-titulo">O caracol estrábico</h5>
+                            <p class="banner-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quasi ipsam optio vero totam, inventore porro, obcaecati accusantium ipsum distinctio tempore mollitia ex natus accusamus libero harum pariatur unde molestias maiores possimus ea quibusdam odit? Recusandae distinctio numquam ducimus ullam!</p>
+                            <button class="p-0 botoes"></button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class="carousel_pequeno_img" src="imagens_para_site/mobile/cabecalho3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption carousel-pequeno-legenda col-10 nao_novidade_pequeno">
+                            <h5 class="banner-titulo">O colecionador de amnésias</h5>
+                            <p class="banner-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quasi ipsam optio vero totam, inventore porro, obcaecati accusantium ipsum distinctio tempore mollitia ex natus accusamus libero harum pariatur unde molestias maiores possimus ea quibusdam odit? Recusandae distinctio numquam ducimus ullam!</p>
+                            <button class="p-0 botoes"></button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class="carousel_pequeno_img" src="imagens_para_site/mobile/cabecalho4.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption carousel-pequeno-legenda col-10 nao_novidade_pequeno">
+                            <h5 class="banner-titulo">O velho que pensava que fugia</h5>
+                            <p class="banner-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quasi ipsam optio vero totam, inventore porro, obcaecati accusantium ipsum distinctio tempore mollitia ex natus accusamus libero harum pariatur unde molestias maiores possimus ea quibusdam odit? Recusandae distinctio numquam ducimus ullam!</p>
+                            <button class="p-0 botoes"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Navegação-->
+            <div class="navegacao row d-flex justify-content-center">
+                <!--Titulo-->
+                <div id="titulo_nav" class="titulo d-flex p-0">
+                    <h1 class="text-start m-0">Sebastião Alves</h1>
+                    <!--Botao da Navbar pequena-->
+                    <button class="mobile-nav-toggle d-block d-sm-none align-self-start" type="button" onclick="mostrarMenu(this, 'navbar_pequena')">
+                        <span></span>
+                    </button>
+                </div>
+                <!--Navbar pequena-->
+                <nav class="navbar_pequena navbar p-0 m-0" id="navbar_pequena">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link active menus" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menus" href="autor.html">Autor</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle menus" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Livros
+                            </a>
+                            <ul class="dropdown-menu mt-4">
+                                <li><a class="dropdown-item .submenu p-0" href="livros1.html">Senhora do amor e da guerra</a></li>
+                                <li><a class="dropdown-item .submenu p-0" href="livros2.html">O caracol estrábico</a></li>
+                                <li><a class="dropdown-item .submenu p-0" href="livros3.html">O coleccionador de amnésias</a></li>
+                                <li><a class="dropdown-item .submenu p-0" href="livros4.html">O velho que pensava que fugia</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menus">
+                            <a class="nav-link" href="imprensa.html">Imprensa</a>
+                        </li>
+                        <li class="nav-item ultimo_link menus">
+                            <a class="nav-link" href="contactos.html">Contactos</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!--Navbar grande-->
+                <div class="divisor col-12 d-flex justify-content-center">
+                    <nav class="d-none d-sm-block navbar navbar-expand bg-body-tertiary p-0 m-0 transparent">
+                        <div class="container-fluid p-0 m-0">
+                            <div class="collapse navbar-collapse p-0 m-0" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item active">
+                                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="autor.html">Autor</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Livros
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="livros1.html">Senhora do amor e da guerra</a></li>
+                                            <li><a class="dropdown-item" href="livros2.html">O caracol estrábico</a></li>
+                                            <li><a class="dropdown-item" href="livros3.html">O coleccionador de amnésias</a></li>
+                                            <li><a class="dropdown-item" href="livros4.html">O velho que pensava que fugia</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="imprensa.html">Imprensa</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contactos.html">Contactos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="container-fluid p-0">
+            <!--Apresentacao para contactos-->
+            <div class="col welcome p-0 m-0">
+                <h5 class="title2">Contactos</h5>
+                <h3 class="text-start title1">Podem contactar-me atraves do e-mail ou telefone</h3>
+            </div>
+
+            <div class="mx-auto col-12 d-flex justify-content-center flex-wrap contactos">
+                <div class="contato col-12 col-md-2 d-flex flex-column align-items-center justify-content-center">
+                    <h3 class="subtitulo text-center">Telefone</h3>
+                    <p class="text-center paragrafos">
+                        +351 927 121 725
+                    </p>
+                </div>
+                <div class="contato  col-12 col-md-4 d-flex flex-column align-items-center justify-content-center">
+                    <h3 class="subtitulo text-center">Morada</h3>
+                    <p class="text-center paragrafos">
+                        Lorem ipsum dolor sit amet, 12
+                        <br>
+                        1234-567 Lorem
+                    </p>
+                </div>
+                <div class="contato  col-12 col-md-2 d-flex flex-column align-items-center justify-content-center">
+                    <h3 class="subtitulo text-center">Email</h3>
+                    <p class="text-center paragrafos">
+                        lorem@lorem.pt
+                    </p>
+                </div>
+            </div>
+
+            <hr id="linha_separadora">
+
+            <div class="col-12 d-flex justify-content-center horario">
+                <div class="col-4">
+                    <h3 class="subtitulo text-center">Horário</h3>
+                    <p class="text-center paragrafos">
+                        De Segunda a Sexta das 00:00h às 00:00h
+                    </p>
+                </div>
+            </div>
+            
+        </main>
+
+        <footer class="container-fluid">
+            <div class="row rodape mx-auto">
+                <!--Navbar do footer-->
+                <nav class="footer-nav d-none d-md-flex justify-content-center">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="#">Autor</a>
+                    <a class="nav-link" href="#">Livros</a>
+                    <a class="nav-link" href="#">Imprensa</a>
+                    <a class="nav-link" href="#">Contactos</a>
+                </nav>
+            </div>
+
+            <div class="footer-end d-flex justify-content-center flex-wrap">
+                <div class="col-12 col-md-6">
+                    <div class="col-12 title1 text-center">Contactos</div>
+                    <div class="col-12 d-flex" id="info_contacto">
+                        <div class="col-12 col-md-5">
+                            <h3 class="subtitulo">Morada</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, 12
+                                <br>
+                                1234-567 Lorem
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-3 margem-10">
+                            <h3 class="subtitulo">Telefone</h3>
+                            <p>
+                                +351 927 121 725
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-3 margem-15">
+                            <h3 class="subtitulo">Email</h3>
+                            <p id="ultimo_contacto">
+                                lorem@lorem.pt
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-none d-md-block" id="seguranca_consumidor">
+                        <img id="ralc" src="imagens_para_site/desktop/ralc.svg" alt="ralc">
+                        <img id="livro_reclamacoes" src="imagens_para_site/desktop/livroreclamacoes.svg" alt="livroreclamacao">
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 d-flex flex-column align-items-center">
+                    <div class="col-12 text-center">
+                        <div class="title1">Siga-me nas redes sociais</div>
+                    </div>
+
+                    <div class="col-12 redes-sociais d-flex justify-content-center">
+                        <button id="facebook"></button>
+                        <button id="instagram"></button>
+                        <button id="linkedin"></button>
+                    </div>
+
+                    <div class="col-12 d-flex d-md-none justify-content-center" id="seguranca_consumidor">
+                        <img id="ralc" src="imagens_para_site/desktop/ralc.svg" alt="ralc">
+                        <img id="livro_reclamacoes" src="imagens_para_site/desktop/livroreclamacoes.svg" alt="livroreclamacao">
+                    </div>
+                
+                    <div class="col-12 text-center copyright">
+                        <p class="text-center m-0 p-0">
+                            Política de cookies.
+                            <br>
+                            Copyright&copy; 2023. Jorge Filho.  Todos os direitos reservados.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
+        <!-- JS do Bootstrap 5.3-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
+
+</html>

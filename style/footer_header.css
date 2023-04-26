@@ -1,0 +1,541 @@
+@font-face{
+    font-family: "IBM-Bold";
+    src: url("../fontes/IBMPlexSans-Bold.ttf");
+}
+@font-face {
+    font-family: "IBM-Light";
+    src: url("../fontes/IBMPlexSans-Light.ttf");
+}
+@font-face {
+    font-family: "IBM-Medium";
+    src: url("../fontes/IBMPlexSans-Medium.ttf");
+}
+@font-face {
+    font-family: "Lato-Black";
+    src: url("../fontes/Lato-Black.ttf");
+}
+@font-face {
+    font-family: "Lato-Bold";
+    src: url("../fontes/Lato-Bold.ttf");
+}
+/*Uso comum*/
+.title1{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: "IBM-Bold";
+    color: #4D4D4D;
+}
+.title2{
+    text-transform: uppercase;
+    color: #B47D33;
+    font-family: "IBM-Medium";
+    font-size: 16px;
+}
+.paragrafos{
+    margin-top: 6px;
+    font-size: 13px;
+    font-family: "IBM-Light";
+    color: #4D4D4D;
+}
+.botoes{
+    background-image: url("../imagens_para_site/desktop/sabermais1.svg");
+    background-size: cover;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+.botoes:hover{
+    background-image: url("../imagens_para_site/desktop/sabermais2.svg");
+}
+.subtitulo{
+    font-size: 15px;
+    font-family: "IBM-Medium";
+    color: #B17E3B;
+    text-transform: uppercase;
+}
+body, h1, h2, h3, h4, h5, .nav-item > .nav-link, p{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: white;
+}
+/*Header*/
+.transparent{
+    background-color: transparent !important;
+}
+.active{
+    color: #B17E3B !important;
+}
+.navegacao{
+    position:absolute;
+    top:52px;
+    width: 100%;
+    z-index:100;
+    text-transform: uppercase;
+}
+#titulo_nav{
+    justify-content: center;
+}
+.navbar_pequena{
+    display: none;
+}
+.navbar-toggler-icon{
+    color: #B17E3B;
+}
+.nav-item, .footer-nav > .nav-link{
+    text-transform: uppercase;
+    font-family: "Lato-Black";
+    font-size: 18px;
+    color: #4D4D4D;
+}
+.nav-item a:hover, .dropdown-menu > li > a:hover, .footer-nav > .nav-link:hover{
+    color: #B47D33;
+    background-color: inherit;
+}
+.dropdown-menu{
+    padding: 25px 30px 35px 30px;
+    margin-top: 17px;
+    border: none;
+    border-radius: 0px;
+    box-shadow: 0px 0px 5px 2px rgba(150, 150, 150, 0.7);
+}
+.dropdown-menu > li > a{
+    margin-bottom: 15px;
+    font-family: "Lato-Black";
+    font-size: 13px;
+    color: #4D4D4D;
+}
+.divisor{
+    background-color: transparent !important;
+    margin-top: 15px;
+    color: #707070;
+    margin: 0px;
+}
+.carousel-item > img{
+    width: 1280px;
+    height: 730px;
+}
+.linha{
+    margin: 0px 15px;
+    color: #4D4D4D;
+    width: calc(100vw - 110px);
+    max-width: calc(1280px - 110px);
+}
+.titulo{
+    font-size: 25px;
+    font-family: "IBM-Bold";
+    color: #4D4D4D;
+    border-bottom: 1px solid #4D4D4D;
+    width: calc(100vw - 110px);
+    max-width: calc(1280px - 110px);
+    margin-bottom: 15px;
+}
+.titulo > h1{
+    padding-bottom: 15px;
+}
+.banner{
+    font-family: "IBM-Medium";
+}
+.banner-titulo{
+    color:#4D4D4D;
+    font-size: 40px;
+    font-family: "IBM-Light";
+    text-align: left;
+    text-transform: uppercase;
+}
+.banner-texto{
+    color:#4D4D4D;
+    font-size: 13px;
+    font-family: "IBM-Light";
+    text-align: left;
+}
+.indicadores{
+    margin-left: 16px;
+}
+.carousel-indicators > img{
+    height: 20px;
+    width: 20px;
+}
+.carousel-caption > .banner{
+    text-transform: uppercase;
+    color: #B47D33;
+}
+.carousel-caption > p, .carousel-caption > button, .carousel-caption > h5{
+    margin-bottom: 15px;
+}
+.carousel-legenda{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+
+    position: absolute !important;
+        /*
+            115px = altura até o final do menu
+            +122px quando tem o elemento novidade
+        */
+    top: calc(115px + 122px) !important;
+    left: calc(100vw/12 + 40px) !important;
+}
+.nao_novidade{
+           /*
+            115px = altura até o final do menu
+            +153px quando tem o elemento novidade
+        */
+    top: calc(115px + 153px) !important;
+}
+.carousel-indicators{
+    margin: 0px;
+    padding: 20px;
+    position: absolute;
+                /*
+                    left igual a legenda do carousel
+                        retirado 20px (padding left do primeirto butão)
+                */
+    left: calc(100vw/12 + 20px) !important;
+    bottom: 5%;
+    display: flex;
+    justify-content: flex-start;
+}
+.carousel-indicators > button{
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    border: 1px solid #4D4D4D !important;
+    background-color: transparent !important;
+    margin-right: 16px !important;
+}
+.carousel-indicators button.active {
+	background-color: #4D4D4D !important;
+}
+
+/*Footer*/
+footer{
+    max-width: 1280px;
+}
+.footer-end{
+    padding: 0px 43px;
+}
+.footer-nav{
+    padding: 27px 20px;
+    border-bottom: #707070 1px solid;
+    border-top: #707070 1px solid;
+}
+.footer-nav > .nav-link{
+    margin-right: 20px;
+    font-size: 16px;
+}
+.rodape{
+    width: calc(100vw - 110px);
+    max-width: calc(1280px - 110px);
+}
+.footer-end{
+    margin-top: 50px;
+}
+.footer-end > .col-6{
+    padding-left: 28px;
+}
+.footer-end .subtitulo{
+    text-align: left;
+    margin-top: 20px;
+}
+.footer-end p{
+    margin-top: 6px;
+    text-align: left;
+    font-size: 15px;
+    font-family: "IBM-Light";
+    color: #4D4D4D;
+    margin-bottom: 58px;
+}
+.margem-15{
+    margin-left: 15px !important;
+}
+.margem-10{
+    margin-left: 10px !important;
+}
+.redes-sociais{
+    margin-top: 30px;
+    gap: 20px;
+}
+.redes-sociais > button{
+    padding: 0px;
+    text-align: center;
+    height: 37px;
+    width: 37px;
+    border: none;
+    outline: none;
+    background-size: cover;
+    background-color: transparent;
+}
+#facebook{
+    background-image: url("../imagens_para_site/desktop/facebook1.svg");
+}
+#facebook:hover{
+    background-image: url("../imagens_para_site/desktop/facebook2.svg");
+}
+#instagram{
+    background-image: url("../imagens_para_site/desktop/instagram1.svg");
+}
+#instagram:hover{
+    background-image: url("../imagens_para_site/desktop/instagram2.svg");
+}
+#linkedin{
+    background-image: url("../imagens_para_site/desktop/linkedin1.svg");
+}
+#linkedin:hover{
+    background-image: url("../imagens_para_site/desktop/linkedin2.svg");
+}
+#livro_reclamacoes{
+    width: 77px;
+    height: 31px;
+    margin-right: 44px;
+}
+#ralc{
+    width: 125px;
+    height: 29px;
+}
+.copyright{
+    margin-top: 88px;
+    margin-bottom: 70px;
+}
+.copyright > p{
+    margin-bottom: 0px;
+}
+@media all and (max-width: 992px){
+    .botoes{
+        width: 101px;
+        height: 26px;
+    }
+    .paragrafos{
+        font-size: 13px;
+    }
+}
+@media all and (max-width: 800px){
+    .carousel-legenda{
+        top: calc(106px + 12px + 122px) !important;
+    }
+}
+
+@media all and (max-width: 768px){
+    /*classes para padronizações de conteúdo*/
+    .title1{
+        font-size: 22px;
+    }
+    .submenu{
+        font-family: "IBM-Medium";
+        font-size: 13px;
+        color: #4D4D4D;
+    }
+    .menus{
+        font-family: "Lato-Black";
+        font-size: 18px;
+    }
+    /*HEADER*/
+    .navegacao{
+        top:70px;
+    }
+    .titulo{
+        width: calc(100vw - 70px);
+    }
+    .linha{
+        width: calc(100vw - 70px);
+    }
+    .carousel_pequeno_img{
+        height: 760px !important;
+        width: 100% !important;
+    }
+    .carousel_pequeno{
+        width: 100%;
+        height: 760px;
+    }
+    .carousel-pequeno-legenda{
+        margin: auto !important;
+    
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+    
+        position: absolute;
+                        /*
+                254px peço de distancia da linha separadora pelo design
+                        70px da height da linha separadora a ser adicionado
+                        */
+        top: calc(254px + 70px);
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .carousel-caption > button{
+        height: 26px;
+        width: 101px;
+    }
+    .nao_novidade_pequeno{
+        top: calc(294px + 70px);
+    }
+    .carousel-pequeno-legenda > .banner{
+        margin-bottom: 25px;
+    }
+    .carousel-pequeno-legenda > .banner-titulo{
+        margin-bottom: 15px;
+        font-size: 32px;
+    }
+    .carousel-pequeno-legenda > .banner-texto{
+        margin-bottom: 20px;
+    }
+    .carousel-indicators-sm{
+        position: absolute;
+                                /*
+                        calculo para ficar a 55px do botao saber mais
+                        */
+        top: calc(760px - 55px);
+        left: calc(100vw/12) !important;
+    }
+
+    .mobile-nav-toggle{
+        border: none;
+        outline: none;
+        background-color: transparent;
+        background-image: url('../imagens_para_site/desktop/menu.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 25px;
+        width: 35px;
+        margin-top: 10px;
+    }
+    #titulo_nav{
+        justify-content: space-between;
+    }
+    .navbar_pequena{
+        width: 100vw;
+        position: absolute;
+        top: 51px;
+        background-color: white;
+    }
+    .navbar_pequena > ul{
+                            /*
+                                -13px do margin bottom do ultimo
+                            */
+        padding: 30px 0px 20px 35px;
+    }
+    .navbar_pequena > ul > li{
+        margin-bottom: 22px;
+    }
+    .navbar_pequena > ul > li > ul > li{
+        margin-bottom: 13px;
+    }
+    .navbar_pequena > ul > li > .dropdown-menu{
+        width: fit-content;
+        padding-bottom: 20px !important;
+    }
+    .ultimo_link{
+        margin-bottom: 0px;
+    }
+    .carousel-caption > button{
+        width: 101px;
+        height: 26px;
+    }
+    /*FOOTER*/
+    footer{
+        padding: 0px 35px !important;
+        width: 100vw;
+    }
+    .rodape{
+        border-bottom: #707070 1px solid;
+        width: calc(100vw - 70px);
+    }
+    .footer-end{
+        margin-top: 60px !important;
+    }
+    .contactos{
+        text-align: center;
+    }
+    #info_contacto{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .subtitulo{
+        margin-top: 20px !important;
+    }
+    .footer-end .subtitulo{
+        text-align: center;
+    }
+    .footer-end p{
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    #ultimo_contacto{
+        margin-bottom: 40px;
+    }
+    .margem-15{
+        margin-left: 0px !important;
+    }
+    .margem-10{
+        margin-left: 0px !important;
+    }
+    #info_contacto > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .redes-sociais > a{
+        margin-left: 25px;
+    }
+    #ralc, #livro_reclamacoes{
+        margin-top: 64px;
+    }
+    #ralc{
+        width: 125px;
+        height: 29px;
+    }
+    #livro_reclamacoes{
+        width: 77px;
+        height: 31px;
+        margin-right: 44px;
+    }
+    .copyright{
+        margin-top: 43px;
+        margin-bottom: 60px;
+    }
+}
+@media all and (max-width: 576px){
+    .navbar_pequena{
+        top: 45px;
+    }
+    #titulo_nav > h1{
+        font-size: 25px;
+    }
+    .mobile-nav-toggle{
+        margin-top: 8px;
+    }
+    .footer-end{
+        padding: 0px 0px;
+    }
+}
+
+@media all and (max-width: 430px){
+    .carousel-indicators-sm{
+        position: absolute;
+                                /*
+                        calculo para ficar a 55px do botao saber mais
+                        */
+        top: calc(760px - 55px);
+        left: 35px !important;
+    }
+    .mobile-nav-toggle{
+        margin-top: 3px;
+    }
+    .navbar_pequena{
+        top: 41px;
+    }
+    #titulo_nav > h1{
+        font-size: 22px;
+    }
+    .title1{
+        font-size: 20px !important;
+    }
+}

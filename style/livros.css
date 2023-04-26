@@ -1,0 +1,93 @@
+body, h1, h3, h5, hr{
+    padding: 0px;
+    margin: 0px;
+}
+.welcome{
+    position: relative;
+    float: right;
+    height: fit-content;
+    top: -45px;
+    background-color: white;
+    margin-right: 0;
+    box-shadow: -3px 5px 7px rgb(180, 180, 180);
+}
+.welcome > h5{
+    font-size: 18px;
+    margin-top: 65px;
+}
+.welcome > h3{
+    padding: 8px 0px 16px 0px;
+}
+.welcome > h5, .welcome > h3{
+    margin-left: 80px;
+}
+#livro{
+    width: calc(100vw - 180px);
+    max-width: calc(1280px - 180px);
+    padding-top: 190px;
+    padding: 0px 55px;
+    margin-bottom: 75px;
+}
+#voltar_atras{
+    margin-top: 85px;
+}
+#voltar_atras{
+    background-size: cover;
+    background-image: url("../imagens_para_site/desktop/voltar1.svg");
+    width: 132px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+#voltar_atras:hover{
+    background-image: url("../imagens_para_site/desktop/voltar2.svg");
+}
+@media all and (max-width: 992px){
+        /*main - home*/
+        .welcome{
+            float: none;
+            top: 0;
+            margin: 0px 0px 0px 0px;
+            padding: 50px 35px 14px 35px !important;
+        }
+        .welcome > h5{
+            margin-top: 0px;
+        }
+        .welcome > h3{
+            margin-left: 0px;
+            padding: 0px;
+            margin-top: 10px;
+        }
+        .welcome > h5, .welcome > h3{
+            margin-left: 0px;
+        }
+        #livro{
+            width: 100vw;
+            padding: 60px 35px 0px 35px;
+        }
+        #imagem_livro{
+            float: none !important;
+            width: 100% !important;
+            text-align: center;
+        }
+        #imagem_livro > img{
+            width: 50% !important;
+        }
+        #livro > p{
+            display: block;
+            padding: 0px;
+            margin-top: 40px;
+        }
+        #ficha_descricao{
+            justify-content: center !important;
+        }
+        #voltar_atras{
+            margin-top: 40px;
+        }
+}
+@media all and (max-width: 576px){
+    #imagem_livro > img{
+        width: 100% !important;
+    }
+}

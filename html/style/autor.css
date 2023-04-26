@@ -1,0 +1,103 @@
+.welcome{
+    position: relative;
+    float: right;
+    height: fit-content;
+    top: -45px;
+    width: calc(100vw - 90px);
+    background-color: white;
+    margin-right: 0;
+    box-shadow: -3px 5px 7px rgb(180, 180, 180);
+}
+.welcome > h5{
+    font-size: 18px;
+    margin-top: 50px;
+}
+.welcome > h3{
+    padding: 8px 0px 16px 0px;
+}
+.welcome > h5, .welcome > h3{
+    margin-left: 80px;
+}
+.autor{
+    width: calc(100vw - 180px);
+    max-width: calc(1280px - 180px);
+    padding-top: 190px;
+    padding: 0px 55px;
+}
+#ver_mais{
+    background-size: cover;
+    background-image: url("../imagens_para_site/desktop/vermais.svg");
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: none;
+}
+#ver_mais:hover{
+    background-image: url("../imagens_para_site/desktop/vermais-cinza.svg");
+}
+#voltar_atras{
+    background-size: cover;
+    background-image: url("../imagens_para_site/desktop/voltar1.svg");
+    width: 132px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 75px 0px;
+}
+#voltar_atras:hover{
+    background-image: url("../imagens_para_site/desktop/voltar2.svg");
+}
+@media all and (max-width: 576px){
+    .title1{
+        font-size: 22px;
+    }
+    /*main - home*/
+    .welcome{
+        float: none;
+        top: 0;
+        margin: 0px 0px 0px 0px;
+        height: fit-content;
+        width: 100vw;
+        padding: 50px 35px 14px 35px !important;
+    }
+    .welcome > h5{
+        margin-top: 0px;
+    }
+    .welcome > h3{
+        margin-left: 0px;
+        padding: 0px;
+        margin-top: 10px;
+    }
+    .welcome > h5, .welcome > h3{
+        margin-left: 0px;
+    }
+    .autor{
+        width: 100vw;
+        margin-top: 60px;
+        padding: 0px 35px;
+    }
+    .autor > img{
+        width: 100%;
+    }
+    .autor > p{
+        font-size: 14px;
+        padding: 55px 0px 40px 0px;
+        margin: 0px;
+    }
+    #ver_mais{
+        width: 90px;
+        height: 26px;
+        display: block;
+    }
+    #voltar_atras{
+        padding: 0px;
+        margin: 20px 0px 40px 0px;
+        align-self: center !important;
+    }
+    #info_extra{
+        display: none;
+    }
+}

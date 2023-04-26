@@ -1,0 +1,169 @@
+/*Uso comum*/
+.title1{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: "IBM-Bold";
+    color: #4D4D4D;
+}
+.title2{
+    text-transform: uppercase;
+    color: #B47D33;
+    font-family: "IBM-Medium";
+    font-size: 16px;
+}
+.paragrafos{
+    margin-top: 6px;
+    font-size: 13px;
+    font-family: "IBM-Light";
+    color: #4D4D4D;
+}
+.botoes{
+    background-image: url("../imagens_para_site/desktop/sabermais1.svg");
+    background-size: cover;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+/*main - home*/
+.welcome{
+    position: relative;
+    float: right;
+    margin: -45px 0px 0px 0px;
+    background-color: white;
+    max-height: 538px;
+    height: fit-content;
+    box-shadow: -3px 5px 7px rgb(180, 180, 180);
+    padding: 60px !important;
+}
+.welcome > .caixa-imagem{
+    text-align: center;
+    height: fit-content;
+}
+#sebastiao{
+    width: 312px;
+    height: 396px;
+}
+#sobre_sebastiao{
+    padding-left: 35px !important;
+    height: fit-content;
+}
+#sobre_sebastiao h3{
+    margin-top: 20px;
+    font-size: 25px;
+    color: #4D4D4D;
+    text-transform: uppercase;
+}
+#sobre_sebastiao a{
+    align-self: flex-end;
+    margin-top: 40px;
+}
+#sobre_sebastiao p{
+    margin-top: 30px;
+    font-size: 13px;
+    font-family: "IBM-Light";
+    text-align: left;
+}
+.colecao_livros{
+    padding-top: calc(85px + 390px + 85px);
+    margin-left: 90px;
+    width: calc(100vw - 180px);
+}
+#sobre_livros{
+    text-align: left;
+    margin-top: 23px;
+    font-size: 13px;
+    font-family: "IBM-Light";
+}
+#sesao_cartas{
+    margin: auto;
+    margin-top: 70px;
+    padding-bottom: 106px;
+    max-width: calc(1280px - 110px);
+    width: calc(100vw - 110px);
+}
+.card{
+    height: 700px;
+    box-shadow: 3px 5px 7px rgb(180, 180, 180);
+}
+.card-body > h3{
+    margin-top: 30px;
+}
+.card-body > p{
+    margin-top: 10px;
+}
+.card-body > a{
+    position: relative;
+    float: right;
+    margin-right: 0px;
+    margin-top: 15px;
+}
+/* fim do main-home
+                            sm:576px
+*/
+@media all and (max-width: 992px){
+    /*main - home*/
+    .welcome{
+        float: none;
+        margin: 0px 0px 0px 0px;
+        max-height: fit-content;
+        padding: 73px 35px 60px 35px !important;
+    }
+    .welcome > .caixa-imagem{
+        padding: 0px !important;
+        text-align: center;
+        height: 396px;
+    }
+    #sebastiao{
+        width: 286px;
+        height: 396px;
+    }
+    #sobre_sebastiao{
+        padding: 0px !important;
+    }
+    #sobre_sebastiao h3{
+        margin-top: 35px;
+    }
+    #sobre_sebastiao p{
+        margin-top: 20px;
+    }
+    #sobre_sebastiao button{
+        align-self: center;
+    }
+    .colecao_livros{
+        padding: 40px 35px 0px 35px !important;
+        margin-left: 0px;
+        width: fit-content;
+        font-size: 13px;
+        font-family: "IBM-Light";
+    }
+    #sobre_livros{
+        text-align: left;
+        margin-top: 20px;
+    }
+    #sesao_cartas{
+        margin-top: 43px;
+        padding-bottom: 60px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .card-body{
+        padding: 0px 25px;
+    }
+    .card-body > h5{
+        margin-top: 30px;
+        margin-bottom: 0px;
+        font-size: 23px;
+    }
+    .card-body > p{
+        font-size: 13px;
+        margin-top: 14px;
+    }
+    .card-body > a{
+        position: relative;
+        float: right;
+        margin-right: 0px;
+        margin-top: 15px;
+    }
+} 
