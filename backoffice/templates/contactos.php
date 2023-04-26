@@ -1,32 +1,29 @@
 
 
-<table>
-    <form action="actions/contactos-edit.php" method="GET" id="formulario">
-        <tr>
-            <th class="text-center">Morada</th>
-            <th class="text-center">E-mail</th>
-            <th class="text-center">Telemovel</th>
-            <th class="text-center">Data de atualização</th>
-            <th class="text-center">Ações</th>
-        </tr>
-            
-        <tr>
-            <td>
-                <?=$contactos["morada"]?>
-            </td>
-            <td>
-                <?=$contactos["email"]?>
-            </td>
-            <td>
-                <?=$contactos["telemovel"]?>
-            </td>
-            <td>
-                <?=$contactos["data_atualizacao"]?> 
-            </td>
-            <td>
-                <button type="submit" name="editar" value="<?=$contactos["id"]?>"form="formulario" class="">Editar!</button>
-            </td>
-        </tr>  
-        
-    </form>
-</table>
+
+<form action="actions/contactos-edit.php" method="GET" id="formulario" class="sem_tabela d-flex flex-column align-items-center">
+
+    <h3 class="text-center">Morada</h3>
+    <p>
+        <?=$contactos["morada"]?>
+    </p>
+
+    <h3 class="text-center">E-mail</h3>
+    <p>
+        <?=$contactos["email"]?>
+    </p>
+
+    <h3 class="text-center">Telemovel</h3>
+    <p>
+        <?=$contactos["telemovel"]?>
+    </p>
+
+    <h3 class="text-center">Data de atualização</h3>
+    <p>
+        <?=$contactos["data_atualizacao"]?> 
+    </p>   
+
+    <button type="submit" name="editar" value="<?=$contactos["id"]?>"form="formulario" class="">Editar!</button>
+
+
+</form>

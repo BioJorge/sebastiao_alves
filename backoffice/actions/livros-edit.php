@@ -106,11 +106,17 @@
                 <?php if(isset($_GET["editar"])): ?>
                     <form action="livros-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
                         <h3 class="text-center">Imagem das Cartas [Home]</h3>
-                        <input type="text" name="imagem_cartas" value="<?=$livro_em_edicao["imagem_cartas"]?>">
+                        <div>
+                            <input type="text" name="imagem_cartas" value="<?=$livro_em_edicao["imagem_cartas"]?>">
+                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        </div>
                         <br>
 
                         <h3 class="text-center">Imagem dos Livros [Página do Livro]</h3>
-                        <input type="text" name="imagem_livros" value="<?=$livro_em_edicao["imagem_livros"]?>">
+                        <div>
+                            <input type="text" name="imagem_livros" value="<?=$livro_em_edicao["imagem_livros"]?>">
+                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        </div>
                         <br>
 
                         <h3 class="text-center">Título</h3>
@@ -149,10 +155,18 @@
                     <form action="livros-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
 
                         <h3 class="text-center">Imagem das Cartas [Home]</h3>
-                        <input type="text" name="imagem_cartas">
+                        <div>
+                            <input type="text" name="imagem_cartas">
+                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        </div>
+                   
                         <br>
                         <h3 class="text-center">Imagem dos Livros [Página do Livro]</h3>
-                        <input type="text" name="imagem_livros">
+                        <div>
+                            <input type="text" name="imagem_livros">
+                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        </div>
+                        
                         <br>
                         <h3 class="text-center">Título</h3>
                         <input type="text" name="titulo">

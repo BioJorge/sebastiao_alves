@@ -27,10 +27,10 @@ body{
     background-position: center center;
     background-repeat: no-repeat;
     backdrop-filter: blur(2px);
+    min-height: 100vh;
 }
 header{
     background-color: #404040d0;
-    
 }
 main{
     padding: 0px;
@@ -38,6 +38,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 60vh;
 }
 button{
     background-color: #B47D33;
@@ -138,7 +139,24 @@ input[type=text]{
     word-wrap: break-word;
     word-break: break-all;
 }
-
+.sem_tabela{
+    background-color: #4040407c;
+    border-radius: 15px;
+    padding: 30px;
+}
+.sem_tabela > p{
+    text-align: center;
+    color: white;
+    border-bottom: white;
+    font-family: "IBM-Light";
+}
+.sem_tabela > h3{
+    font-family: "IBM-Bold";
+    text-transform: uppercase;
+    color: #404040;
+}
+footer{
+}
 
 /*Footer*/
 .footer-end{

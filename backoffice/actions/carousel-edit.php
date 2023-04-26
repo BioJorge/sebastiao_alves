@@ -106,23 +106,33 @@
                 <?php if(isset($_GET["editar"])): ?>
                     <form action="carousel-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
                         <h3 class="text-center">Imagem_sm</h3>
-                        <input type="text" name="imagem_sm" value="<?=$carousel_em_edicao["imagem_sm"]?>" name="imagem_sm">
+                        <div>
+                            <input type="text" name="imagem_sm" value="<?=$carousel_em_edicao["imagem_sm"]?>" name="imagem_sm">
+                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        </div>
                         <br>
+
                         <h3 class="text-center">Imagem_lg</h3>
-                        <input type="text" name="imagem_lg" value="<?=$carousel_em_edicao["imagem_lg"]?>" name="imagem_lg">
+                        <div>
+                            <input type="text" name="imagem_lg" value="<?=$carousel_em_edicao["imagem_lg"]?>" name="imagem_lg">
+                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        </div>
                         <br>
+
                         <h3 class="text-center">Título</h3>
                         <input type="text" name="titulo" value="<?=$carousel_em_edicao["titulo"]?>">
                         <br>
+
                         <h3 class="text-center">Categoria</h3>
                         <input type="text" name="categoria" value="<?=$carousel_em_edicao["categoria"]?>">
                         <br>
+
                         <h3 class="text-center">Sinopse</h3>
                         <textarea name="sinopse" id="editor1" cols="30" rows="10">
                             <?=$carousel_em_edicao["sinopse"]?>
                         </textarea>
-                      
                         <br>
+
                         <input type="hidden" name="id" value="<?=$id?>">
                         <input type="submit" class="mt-3" value="Editar!!"></button>
                     </form>
@@ -133,20 +143,26 @@
                     <form action="carousel-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
 
                         <h3>Imagem_sm</h3>
-                        <td><textarea name="imagem_sm" id="" cols="60" rows="2"></textarea></td>
+                        <div>
+                            <input type="text" name="imagem_sm">
+                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        </div>
 
                         <h3>Imagem_lg</h3>
-                        <td><textarea name="imagem_lg" id="" cols="60" rows="2"></textarea></td>
+                        <div>
+                            <input type="text" name="imagem_lg">
+                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        </div>
 
                         <h3>Título</h3>
-                        <td><textarea name="titulo" id="" cols="60" rows="2"></textarea></td>
+                        <textarea name="titulo" id="" cols="60" rows="2"></textarea>
                         
                         <h3>Categoria</h3>
-                        <td><textarea name="categoria" id="" cols="60" rows="2"></textarea></td>
+                        <textarea name="categoria" id="" cols="60" rows="2"></textarea>
 
                         <h3>Sinopse</h3>
-                        <td><textarea name="sinopse" id="editor1" cols="60" rows="4">
-                        </textarea></td>
+                        <textarea name="sinopse" id="editor1" cols="60" rows="4">
+                        </textarea>
 
                         <input type="hidden" name="inserir_confirmacao" value="true">
                         <input type="submit" class="mt-3" value="Criar!"></button>

@@ -79,8 +79,12 @@
                 <form action="" method="GET" id="formulario" class="d-flex flex-column align-items-center">
 
                     <h3 class="text-center">Imagem</h3>
-                    <input type="text" name="imagem" value="<?=$autor_edicao["imagem"]?>">
+                    <div>
+                        <input type="text" name="imagem" value="<?=$autor_edicao["imagem"]?>">
+                        <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                    </div>
                     <br>
+
                     <h3 class="text-center">Texto sobre autor</h3>
                     <textarea name="sobre_autor" id="editor1" cols="30" rows="10">
                         <?=$autor_edicao["sobre_autor"]?>

@@ -1,20 +1,25 @@
 
-<form action="actions/redes-edit.php" class="d-flex flex-column justify-content-center align-items-center gap-3">
-    <table>
-        <tr>
-            <th class="text-center text-uppercase">facebook</th>
-            <th class="text-center text-uppercase">Instagram</th>
-            <th class="text-center text-uppercase">Linkedin</th>
-            <th class="text-center">Data de atualização</th>
-        </tr>
-        <tr>
-            <td><?=$redes_sociais["facebook"]?></td>
-            <td><?=$redes_sociais["instagram"]?></td>
-            <td><?=$redes_sociais["linkedin"]?></td>
-            <td><?=$redes_sociais["data_atualizacao"]?></td>
-        </tr>
+<form action="actions/redes-edit.php" class="sem_tabela d-flex flex-column align-items-center">
 
-    </table>
+    <h3>facebook</h3>
+    <p>
+        <?=$redes_sociais["facebook"]?>
+    </p>
+
+    <h3>Instagram</h3>
+    <p>
+        <?=$redes_sociais["instagram"]?>
+    </p>
+
+    <h3>Linkedin</h3>
+    <p>
+        <?=$redes_sociais["linkedin"]?>
+    </p>
+
+    <h3>Data de atualização</h3>
+    <p>
+        <?=$redes_sociais["data_atualizacao"]?>
+    </p>
 
     <button type="submit" name="editar" value="<?=$redes_sociais["id"]?>">Editar</button>
 </form>

@@ -90,7 +90,10 @@
                 <?php if(isset($_GET["editar"])): ?>
                     <form action="imprensa-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
                         <h3 class="text-center">Imagem</h3>
-                        <input type="text" name="imagem" value="<?=$imprensa_em_edicao["imagem"]?>" name="imagem_sm">
+                        <div>
+                            <input type="text" name="imagem" value="<?=$imprensa_em_edicao["imagem"]?>" name="imagem_sm">
+                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        </div>
                         <br>
 
                         <h3 class="text-center">Titulo</h3>
@@ -117,15 +120,17 @@
                     <form action="imprensa-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
 
                         <h3>Imagem</h3>
-                        <textarea name="imagem" id="" cols="60" rows="2"></textarea>
+                        <div>
+                            <input type="text" name="imagem">
+                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        </div>
+                        <br>
 
                         <h3>Título</h3>
                         <textarea name="titulo" id="" cols="60" rows="2"></textarea>
                         
                         <h3>Descricao</h3>
-                            <textarea name="descricao" id="editor1" cols="30" rows="10">
-                    
-                            </textarea>
+                        <textarea name="descricao" id="editor1" cols="30" rows="10"></textarea>
 
                         <h3>Data de publicação</h3>
                         <textarea name="data_publicacao" id="" cols="60" rows="2"></textarea>

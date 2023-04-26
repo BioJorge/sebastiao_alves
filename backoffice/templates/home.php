@@ -1,33 +1,27 @@
 
 
-<table>
-    <form action="actions/home-edit.php" method="GET" id="formulario">
-        <tr>
-            <th class="text-center">Título da caixa de introdução</th>
-            <th class="text-center">Parágrafo da caixa de introdução</th>
-            <th class="text-center">Parágrafo da caixa dos últimos livros</th>
-            <th class="text-center">Data de atualização</th>
-            <th class="text-center">Ações</th>
-        </tr>
+<form action="actions/home-edit.php" method="GET" id="formulario" class="sem_tabela d-flex flex-column align-items-center">
+    
+        <h3 class="text-center">Título da caixa de introdução</h3>
+        <p class="text-center">
+            <?=$home["caixa_titulo"]?>
+        </p>
 
-        
-        <tr>
-            <td>
-                <?=$home["caixa_titulo"]?>
-            </td>
-            <td>
-                <?=$home["caixa_paragrafo"]?>
-            </td>
-            <td>
-            <?=$home["ultimos_livros_paragrafo"]?>
-            </td>
-            <td>
-                <?=$home["data_atualizacao"]?> 
-            </td>
-            <td>
-                <button type="submit" name="editar" value="<?=$home["id"]?>" class="">Editar!</button>
-            </td>
-        </tr>
-        
-    </form>
-</table>
+        <h3 class="text-center">Parágrafo da caixa de introdução</h3>
+        <p class="text-justify">
+            <?=$home["caixa_paragrafo"]?>
+        </p>
+
+        <h3 class="text-center">Parágrafo da caixa dos últimos livros</h3>
+        <p>
+        <?=$home["ultimos_livros_paragrafo"]?>
+        </p>
+
+        <h3 class="text-center">Data de atualização</h3>
+        <p class="text-center">
+            <?=$home["data_atualizacao"]?> 
+        </p>
+
+        <button type="submit" name="editar" value="<?=$home["id"]?>" class="">Editar!</button>
+
+</form>
