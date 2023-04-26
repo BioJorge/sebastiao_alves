@@ -83,15 +83,31 @@
         return $cliente;
     }
 
+    function getColabNameByID($id_usuario){
+        return selectSQLUnico("SELECT nome FROM colaboradores WHERE id='$id_usuario'")["nome"];
+    }
     function novoAcesso($id_usuario){
         $data_atual = date("H:i:s - d/m/Y");
-        iduSQL("INSERT INTO acessos (id_cliente, datas) VALUES ('$id_usuario', '$data_atual')");
+        iduSQL("INSERT INTO acessos (id_usuario, datas) VALUES ('$id_usuario', '$data_atual')");
+    }
+
+    function getTodosAcessosByID($id_usuario){
+        return selectSQL("SELECT * FROM acessos WHERE id_usuario='$id_usuario' ORDER BY id DESC");
+    }
+
+    function getUltimoAcesso($id_usuario){
+        $ultimo =  selectSQLUnico("SELECT * FROM acessos WHERE id_usuario='$id_usuario' ORDER BY id DESC LIMIT 2 OFFSET 1");
+        return (!empty($ultimo) ? "$ultimo[datas]" : "---");
     }
 
     function getLivroById($id_livro){
         $livro = selectSQLUnico("SELECT * from livros WHERE id='$id_livro'");
         return $livro;
     }
+
+
+
+
 
     
 
