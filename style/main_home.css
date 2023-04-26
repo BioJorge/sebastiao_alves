@@ -69,6 +69,8 @@
     padding-top: calc(85px + 390px + 85px);
     margin-left: 90px;
     width: calc(100vw - 180px);
+    font-size: 13px;
+    font-family: "IBM-Light";
 }
 #sobre_livros{
     text-align: left;
@@ -86,6 +88,9 @@
 .card{
     height: 700px;
     box-shadow: 3px 5px 7px rgb(180, 180, 180);
+}
+.card-img-top{
+    height: 379px !important;
 }
 .card-body > h3{
     margin-top: 30px;
