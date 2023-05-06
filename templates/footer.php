@@ -1,19 +1,17 @@
 <?php
-    $url = "http://localhost/codemaster/trabalho_final_sebastiao_alves/";
+    $redes_sociais = selectSQLUnico("SELECT * FROM redes_sociais ORDER BY id ASC");
+    $contactos = selectSQLUnico("SELECT * FROM contactos ORDER BY id ASC");
 ?>
 
 <footer class="container-fluid">
     <div class="row rodape mx-auto">
         <!--Navbar do footer-->
-        <nav class="footer-nav d-none d-md-flex justify-content-center">
-            <?php foreach($navegacao_footer as $f):?>
-
-                <?php $nome = $f["nome"];?>
-
-                <a class="nav-link" href="<?=$f["link"]?>">
-                    <?= ($f["id"] == 3) ? "Livros" : "$nome"; ?> 
-                </a>
-            <?php endforeach; ?>
+        <nav class="footer-nav d-none d-md-flex justify-content-center">    
+            <a class="nav-link <?=($actual_link == $url_home || $actual_link == $url_index) ? "active" : ""?>" aria-current="page" href="index.php">Home</a>
+            <a class="nav-link <?=($actual_link == $url_autor) ? "active" : ""?>" href="autor.php">Autor</a>
+            <a class="nav-link <?= (strpos("$actual_link", "$url_livros") !== false) ? "active" : "" ?>" href="livros.php?livro=1" role="button" data-bs-toggle="dropdown" aria-expanded="false">Livros</a>
+            <a class="nav-link <?=($actual_link == $url_imprensa) ? "active" : ""?>" href="imprensa.php">Imprensa</a>
+            <a class="nav-link <?=($actual_link == $url_contactos) ? "active" : ""?>" href="contactos.php">Contactos</a>
         </nav>
     </div>
 

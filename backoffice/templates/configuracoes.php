@@ -1,12 +1,4 @@
 
-<?php
-    require_once("../php/config.php");
-    require_once("../php/base_dados.php");
-    require_once("../php/funcoes.php");
-    require_once("../php/globais.php");
-
-?>
-
 
 <div class="container-fluid opcoes_edicao flex-column d-flex justify-content-center align-items-center mt-3">
     <form action="actions/configuracoes-edit.php" method="GET" id="formulario" class="senhas d-flex flex-column align-items-center justify-content-center">

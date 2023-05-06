@@ -33,6 +33,7 @@ main{
 .caixa-livro{
     margin: auto;
     width: 80%;
+    margin-bottom: 48px;
 }
 .livro{
     padding: 0px 55px;

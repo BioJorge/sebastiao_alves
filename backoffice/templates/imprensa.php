@@ -12,10 +12,10 @@
             </tr>
 
             
-        <?php foreach($imprensa as $i): ?>
+        <?php foreach($imprensas as $i): ?>
             <tr>
                 <td class="img_imprensa">
-                    <img src="<?=$i["imagem"]?>" alt="">
+                    <img src="<?=(strpos("$i[imagem]", "uploads") !== false) ? "$i[imagem]" : "../" . $i["imagem"]?>" alt="">
                 </td>
                 <td>
                     <?=$i["titulo"]?>

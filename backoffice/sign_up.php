@@ -1,8 +1,5 @@
 <?php
-    require_once("../php/config.php");
-    require_once("../php/base_dados.php");
-    require_once("../php/funcoes.php");
-    require_once("../php/globais.php");
+    require_once("../controllers/requisitos.php");
 
     $form = isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["senha"]);
 
@@ -89,7 +86,7 @@
                             <button type="submit" class="btn">Sign Up</button>
     
                             <div class="login-register">
-                                <p>Already have an account? <a href="backoffice.php">Sign in</a></p>
+                                <p>Already have an account? <a href="http://localhost/sebastiao_alves/backoffice.php">Sign in</a></p>
                             </div>
                         </form>
                     </div>

@@ -1,6 +1,7 @@
 <?php
 
     if(isset($_GET["livro"])){
+        $lista_livros = selectSQL("SELECT * FROM livros ORDER BY id ASC");
         foreach($lista_livros as $ll){
             if($ll["id"] == intval($_GET["livro"])){
                 $livro_selecionado = $ll;
@@ -26,16 +27,14 @@
             <img src="<?=$livro_selecionado["imagem_livros"]?>" alt="" class="text-center">
         </div>
         
-        <p class="paragrafos">
+        <p class="paragrafos col-12">
             <?=$livro_selecionado["descricao"]?>
         </p>
-        
-        <div class="col-12 d-flex justify-content-between align-items-center flex-wrap" id="ficha_descricao">
-            <p class="paragrafos col-12 col-sm-6 align-self-end">
-                <?=$livro_selecionado["cadernacao"]?>
-            </p>
-            <button class="col-12 col-sm-6 align-self-start" id="voltar_atras"></button>
+
+        <div class="col-12 d-flex flex-column align-items-center align-items-xl-end">
+            <button id="voltar_atras"></button>
         </div>
+
         
     </div>
 </main>

@@ -1,0 +1,185 @@
+body, h1, h3, h5, hr{
+    padding: 0px;
+    margin: 0px;
+}
+main{
+    padding: 0px 55px;
+}
+.welcome{
+    position: relative;
+    float: right;
+    height: fit-content;
+    top: -45px;
+    background-color: white;
+    margin-right: 0;
+    box-shadow: -3px 5px 7px rgb(180, 180, 180);
+}
+.welcome > h5{
+    font-size: 18px;
+    margin-top: 65px;
+}
+.welcome > h3{
+    padding: 8px 0px 16px 0px;
+}
+.welcome > h5, .welcome > h3{
+    margin-left: 80px;
+}
+.lancamento{
+    box-shadow: -3px 5px 7px rgb(180, 180, 180);
+}
+.lancamento > .caixa-livro{
+    padding-top: 65px;
+}
+.caixa-livro{
+    margin: auto;
+    width: 80%;
+    margin-bottom: 48px;
+}
+.livro{
+    padding: 0px 55px;
+}
+.titulo_imprensa{
+    padding-bottom: 12px;
+    border-bottom: 1px solid #A97339;;
+}
+.paragrafo_imprensa{
+    padding-top: 12px;
+    text-align: right;
+    font-family: "IBM-Medium";
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #4d4d4d;
+    padding-bottom: 40px;
+}
+.livro-2{
+    margin-top: 80px;
+}
+.livro-2 > .container{
+    padding-bottom: 90px;
+}
+.pagination{
+    margin-top: 90px;
+}
+.paginacao{
+    margin-bottom: 90px;
+}
+.page-link{
+    border: none;
+    color: #4d4d4d;
+    font-size: 23px;
+    font-family: "IBM-Medium";
+    padding: 0px;
+    margin: 0px 17px 0px 0px;
+}
+
+#seta_esquerda{
+    background-image: url("../public/imagens/setaesquerda1.svg");
+    margin: 0px 60px 0px 0px;
+    
+}
+#seta_esquerda:hover{
+    background-image: url("../public/imagens/setaesquerda2.svg");
+}
+#seta_direita{
+    background-image: url("../public/imagens/setadireita1.svg");
+                    /*
+                    60px é o delimitado pelo design
+                        -17px pq o último número de página já tem uma margem de 17px.
+                */
+    margin: 0px 0px 0px calc(60px - 17px);
+}
+#seta_direita:hover{
+    background-image: url("../public/imagens/setadireita2.svg");
+}
+.setas{
+    height: 30px;
+    width: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.pagina{
+    margin-right: 17px;
+}
+.page-item:hover, .page-link:hover{
+    background-color: transparent;
+    color: #B17E3B;
+}
+@media all and (max-width: 768px){
+    .title1{
+        font-size: 22px;
+    }
+    /*main - home*/
+
+    .welcome{
+        float: none;
+        top: 0;
+        margin: 0px 0px 0px 0px;
+        height: fit-content;
+        padding: 50px 35px 40px 35px !important;
+    }
+    .welcome > h5{
+        margin-top: 0px;
+    }
+    .welcome > h3{
+        margin-left: 0px;
+        padding: 0px;
+        margin-top: 10px;
+    }
+    .welcome > h5, .welcome > h3{
+        margin-left: 0px;
+    }
+    .lancamento{
+        padding: 60px 35px 55px 35px;
+    }
+    .titulo_imprensa{
+        padding: 0px;
+        padding-bottom: 10px;
+    }
+    .paragrafo_imprensa{
+        padding: 10px 0px 30px 0px;
+    }
+    .box_shadow_none{
+        box-shadow: none;
+    }
+    .livro-2{
+        margin: 60px 0px 50px 0px;
+    }
+    .livro > .caixa-livro{
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    .livro-2{
+        padding: 0px 35px;
+    }
+    .caixa-livro{
+        margin: auto;
+        width: 100%;
+    }
+    .caixa-livro > div > img{
+        margin-bottom: 0px !important;
+    }
+    .page-link{
+        font-size: 15px;
+        padding: 0px;
+        margin: 0px 26px 0px 0px;
+    }
+    .seta_esquerda{
+        margin: 0px calc(60px - 26px) 0px 0px;
+        padding: 0px
+    }
+    #seta_direita{
+        margin: 0px 0px 0px calc(60px - 26px) !important;
+        padding: 0px;
+    }
+    .paginacao{
+        margin-bottom: 60px;
+    }
+    .pagination{
+        padding: 0px;
+        margin: 0px;
+    }
+}

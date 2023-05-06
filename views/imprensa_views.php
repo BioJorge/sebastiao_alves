@@ -31,19 +31,23 @@
     </div>
 
     <div class="livro lancamento">
-        <div class="caixa-livro p-0">
+        <div class="caixa-livro pb-5">
             <h3 class="title1 titulo_imprensa"><?=$imprensas[0]["titulo"]?></h3>
             <p class="paragrafo_imprensa"><?=$imprensas[0]["data_publicacao"]?></p>
-            <div><img class="w-100 mb-5" src="<?=$imprensas[0]["imagem"]?>" alt=""></div>    
+            <div>
+                <img class="w-100" src="<?=$imprensas[0]["imagem"]?>" alt="">
+            </div>    
+            
+            <p class="paragrafos <?=($imprensas[0]["descricao"] == "") ? "" : "mt-5" ?>">
+                <?=$imprensas[0]["descricao"]?>
+            </p>
         </div>
 
-        <p class="paragrafos mt-5">
-            <?=$imprensas[0]["descricao"]?>
-        </p>
+
         
     </div>
 
-    <div class="livro livro-2">
+    <div class="livro livro-2 <?=(count($imprensas) == 1) ? "d-none" : "" ?>">
         <div class="caixa-livro">
             <h3 class="title1 titulo_imprensa"><?=$imprensas[1]["titulo"]?></h3>
             <p class="paragrafo_imprensa"><?=$imprensas[1]["data_publicacao"]?></p>
@@ -57,7 +61,7 @@
         </div>
     </div>
 
-    <div class="paginacao mx-auto">
+    <div class="paginacao mx-auto <?=(count($imprensas) == 1) ? "mt-5 mt-dm-0" : "" ?>">
         <nav aria-label="Page navigation example">
             <form action="" class="pagination d-flex justify-content-center">
                 <button class="setas" id="seta_esquerda" name="pagina" value="<?= ($pagina_atual > 1) ? ($pagina_atual-1) : 1 ?>"></button>

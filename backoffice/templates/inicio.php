@@ -13,7 +13,7 @@
 
 <!--Apresentacao-->
 <div class="col-12 welcome p-3 d-flex flex-column justify-content-around align-items-center">
-    <img src="../imagens_para_site/desktop/hacker-python.gif" alt="">
+    <img src="../public/imagens/hacker-python.gif" alt="">
     <h3 class="mt-3">Bem vindo ao BACKOFFICE, <span><?=$user["nome"] . " " . $user["apelido"]?></span></h3>
 
     <h3 class="text-center p-1">Lista de Acessos</h3>

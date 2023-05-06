@@ -6,8 +6,6 @@
                 <th class="text-center">Título</th>
                 <th class="text-center">Categoria</th>
                 <th class="text-center">Descrição</th>
-                <th class="text-center">Sinopse da Carta</th>
-                <th class="text-center">Cadernação</th>
                 <th class="text-center">Data de atualização</th>
                 <th class="text-center">Ações</th>
             </tr>
@@ -16,10 +14,10 @@
         <?php foreach($lista_livros as $lc): ?>
             <tr>
                 <td class="img_livro">
-                    <img src="<?=$lc["imagem_cartas"]?>" alt="">
+                    <img src="<?=(strpos("$lc[imagem_cartas]", "uploads") !== false) ? "$lc[imagem_cartas]" : "../" . $lc["imagem_cartas"]?>" alt="">
                 </td>
                 <td class="img_livro">
-                    <img src="<?=$lc["imagem_livros"]?>" alt="">
+                    <img src="<?=(strpos("$lc[imagem_livros]", "uploads") !== false) ? "$lc[imagem_livros]" : "../" . $lc["imagem_livros"]?>" alt="">
                 </td>
                 <td>
                     <?=$lc["titulo"]?>
@@ -29,12 +27,6 @@
                 </td>
                 <td>
                     <?=$lc["descricao"]?>
-                </td>
-                <td>
-                    <?=$lc["sinopse"]?>
-                </td>
-                <td>
-                    <?=$lc["cadernacao"]?>
                 </td>
                 <td>
                     <?=$lc["data_atualizacao"]?> 

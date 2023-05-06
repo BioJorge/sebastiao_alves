@@ -16,10 +16,10 @@
             <?php foreach($lista_carousel as $lc): ?>
                 <tr>
                     <td class="img_livro">
-                        <img src="<?=$lc["imagem_sm"]?>" alt="">
+                        <img src="<?=(strpos("$lc[imagem_sm]", "uploads") !== false) ? "$lc[imagem_sm]" : "../" . $lc["imagem_sm"]?>" alt="">
                     </td>
                     <td class="img_livro">
-                        <img src="<?=$lc["imagem_lg"]?>" alt="">
+                        <img src="<?=(strpos("$lc[imagem_lg]", "uploads") !== false) ? "$lc[imagem_lg]" : "../" . $lc["imagem_lg"]?>" alt="">
                     </td>
                     <td>
                         <?=$lc["titulo"]?>

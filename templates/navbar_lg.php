@@ -1,13 +1,3 @@
-<?php
-    $url_index = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/";
-    $url_home = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/index.php";
-    $url_autor = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/autor.php";
-    $url_contactos = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/contactos.php";
-    $url_imprensa = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/imprensa.php";
-    $url_livros = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/livros.php";
-
-    $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-?>
 
 <!--Navbar grande-->
 <div class="divisor col-12 d-flex justify-content-center">
@@ -40,9 +30,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?=($actual_link == $url_contactos) ? "active" : ""?>" href="contactos.php">Contactos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="backoffice/backoffice.php">Backoffice</a>
                     </li>
                 </ul>
             </div>

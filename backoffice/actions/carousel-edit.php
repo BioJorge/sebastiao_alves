@@ -1,8 +1,5 @@
 <?php
-    require_once("../../php/config.php");
-    require_once("../../php/base_dados.php");
-    require_once("../../php/funcoes.php");
-    require_once("../../php/globais.php");
+    require_once("../../controllers/requisitos.php");
 
 
     session_start();
@@ -19,13 +16,12 @@
         if(isset($_GET["editar"])){
             //pegando o id pra editar e exibir o menu de edição
             $id = $_GET["editar"];
-            $carousel_em_edicao = selectSQLUnico("SELECT * FROM carousel_lg WHERE id='$id'");
+            $carousel_em_edicao = selectSQLUnico("SELECT * FROM carousel WHERE id='$id'");
 
             //deleção direta
         } elseif(isset($_GET["deletar"])){
-            iduSQL("DELETE FROM carousel_lg WHERE id='$_GET[deletar]'");
-            header("Location: ../backoffice-logado.php");
-            exit();
+            $id = $_GET["deletar"];
+            $carousel_em_delecao = selectSQLUnico("SELECT * FROM carousel WHERE id='$id'");
         }
     } else{
         header("Location: ../backoffice-logado.php");
@@ -36,37 +32,27 @@
     if(isset($_GET["id"])){
         $id = $_GET["id"];
         $data = date("H:i:s - d/m/Y");
-        if(!empty($_GET["imagem_sm"])){
-            iduSQL("UPDATE carousel_lg SET imagem_sm='$_GET[imagem_sm]', data_atualizacao='$data' WHERE id='$id'");
 
-        }
-        if(!empty($_GET["imagem_lg"])){
-            iduSQL("UPDATE carousel_lg SET imagem_lg='$_GET[imagem_lg]', data_atualizacao='$data' WHERE id='$id'");
+        iduSQL("UPDATE carousel SET imagem_sm='$_GET[imagem_sm]', imagem_lg='$_GET[imagem_lg]', titulo='$_GET[titulo]', categoria='$_GET[categoria]', sinopse='$_GET[sinopse]', data_atualizacao='$data' WHERE id='$id'");
 
-        }
-        if(!empty($_GET["titulo"])){
-            iduSQL("UPDATE carousel_lg SET titulo='$_GET[titulo]', data_atualizacao='$data' WHERE id='$id'");
-
-        }
-        if(!empty($_GET["categoria"])){
-            iduSQL("UPDATE carousel_lg SET categoria='$_GET[categoria]', data_atualizacao='$data' WHERE id='$id'");
-
-        }
-        if(!empty($_GET["sinopse"])){
-            iduSQL("UPDATE carousel_lg SET sinopse='$_GET[sinopse]', data_atualizacao='$data' WHERE id='$id'");
-
-        }
         header("Location: ../backoffice-logado.php");
         exit();
     }
     if(isset($_GET["inserir_confirmacao"])){
         $data = date("H:i:s - d/m/Y");
 
-        iduSQL("INSERT INTO carousel_lg (imagem_lg, imagem_sm, categoria, titulo, sinopse, data_atualizacao) VALUES ('$_GET[imagem_lg]','$_GET[imagem_sm]', '$_GET[categoria]', '$_GET[titulo]', '$_GET[sinopse]', '$data')");
+        iduSQL("INSERT INTO carousel (imagem_lg, imagem_sm, categoria, titulo, sinopse, data_atualizacao) VALUES ('$_GET[imagem_lg]','$_GET[imagem_sm]', '$_GET[categoria]', '$_GET[titulo]', '$_GET[sinopse]', '$data')");
 
         header("Location: ../backoffice-logado.php");
         exit();
     } 
+
+    //delecao
+    if(isset($_GET["deletar_confirmacao"])){
+        iduSQL("DELETE FROM carousel WHERE id='$_GET[deletar]'");
+        header("Location: ../backoffice-logado.php");
+        exit();
+    }
 
 
 ?>
@@ -85,7 +71,7 @@
         <!-- CSS do Bootstrap 5.3-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <!--CSS proprio-->
-        <link rel="stylesheet" href="../style/backoffice-logado.css">
+        <link rel="stylesheet" href="../public/backoffice-logado.css">
         <!-- editor ckeditor5 -->
         <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
     </head>
@@ -166,6 +152,38 @@
 
                         <input type="hidden" name="inserir_confirmacao" value="true">
                         <input type="submit" class="mt-3" value="Criar!"></button>
+                    </form>
+                <?php endif; ?>
+
+                
+                <?php if(isset($_GET["deletar"])): ?>
+                    <form action="carousel-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
+
+                    <table>
+
+                        <tr>
+                            <th class="text-center">Imagem_sm</th>
+                            <th class="text-center">Imagem_lg</th>
+                            <th class="text-center">Título</th>
+                            <th class="text-center">Categoria</th>
+                            <th class="text-center">Sinopse</th>
+                            <th class="text-center">Link</th>
+                        </tr>
+                        <tr>
+                            <td class="img_livro"><img src="../../<?=$carousel_em_delecao["imagem_sm"]?>" alt=""></td>
+                            <td class="img_livro"><img src="../../<?=$carousel_em_delecao["imagem_lg"]?>" alt=""></td>
+                            <td><?=$carousel_em_delecao["titulo"]?></td>
+                            <td><?=$carousel_em_delecao["categoria"]?></td>
+                            <td><?=$carousel_em_delecao["sinopse"]?></td>
+                            <td><?=$carousel_em_delecao["link"]?></td>
+                        </tr>
+                    </table>
+
+                        <h3>Tem certezas que desejas  eliminar esse item do carousel?</h3>
+
+                        <input type="hidden" name="deletar_confirmacao" value="<?=$id?>">
+                        <input type="submit" class="my-3" value="SIM!"></button>
+                        <a href="../backoffice-logado.php" class="my-5 botoes"></a>
                     </form>
                 <?php endif; ?>
             

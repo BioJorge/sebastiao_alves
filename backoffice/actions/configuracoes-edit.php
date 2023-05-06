@@ -1,8 +1,5 @@
 <?php
-    require_once("../../php/config.php");
-    require_once("../../php/base_dados.php");
-    require_once("../../php/funcoes.php");
-    require_once("../../php/globais.php");
+    require_once("../../controllers/requisitos.php");
 
     $form = isset($_GET["senha_digitada"]) && isset($_GET["nova_senha"]) && isset($_GET["senha_confirmacao"]) && isset($_GET["id"]); 
     if($form){

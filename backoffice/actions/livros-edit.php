@@ -1,8 +1,5 @@
 <?php
-    require_once("../../php/config.php");
-    require_once("../../php/base_dados.php");
-    require_once("../../php/funcoes.php");
-    require_once("../../php/globais.php");
+    require_once("../../controllers/requisitos.php");
 
 
     session_start();
@@ -41,12 +38,10 @@
         $titulo = $_GET["titulo"];
         $categoria = $_GET["categoria"];
         $descricao = $_GET["descricao"];
-        $sinopse = $_GET["sinopse"];
-        $cadernacao = $_GET["cadernacao"];
         $data = date("H:i:s - d/m/Y");
 
 
-        iduSQL("UPDATE livros SET imagem_cartas='$imagem_cartas', imagem_livros='$imagem_livros', titulo='$titulo', categoria='$categoria', descricao='$descricao', sinopse='$sinopse', cadernacao='$cadernacao', data_atualizacao='$data' WHERE id='$id'");
+        iduSQL("UPDATE livros SET imagem_cartas='$imagem_cartas', imagem_livros='$imagem_livros', titulo='$titulo', categoria='$categoria', descricao='$descricao', data_atualizacao='$data' WHERE id='$id'");
 
         header("Location: ../backoffice-logado.php");
         exit();
@@ -62,7 +57,7 @@
         $cadernacao = $_GET["cadernacao"];
         $data = date("H:i:s - d/m/Y");
 
-        iduSQL("INSERT INTO livros (imagem_cartas, imagem_livros, titulo, categoria, descricao, sinopse, cadernacao, data_atualizacao) VALUES ('$imagem_cartas', '$imagem_livros', '$titulo', '$categoria', '$descricao', '$sinopse', '$cadernacao', '$data')");
+        iduSQL("INSERT INTO livros (imagem_cartas, imagem_livros, titulo, categoria, descricao, data_atualizacao) VALUES ('$imagem_cartas', '$imagem_livros', '$titulo', '$categoria', '$descricao', '$data')");
 
         header("Location: ../backoffice-logado.php");
         exit();
@@ -85,7 +80,7 @@
         <!-- CSS do Bootstrap 5.3-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <!--CSS proprio-->
-        <link rel="stylesheet" href="../style/backoffice-logado.css">
+        <link rel="stylesheet" href="../public/backoffice-logado.css">
         <!-- editor ckeditor5 -->
         <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
     </head>
@@ -133,18 +128,6 @@
                         </textarea>
                         <br>
 
-                        <h3 class="text-center">Sinopse da Carta</h3>
-                        <textarea name="sinopse" id="editor2" cols="30" rows="10">
-                            <?=$livro_em_edicao["sinopse"]?>
-                        </textarea>
-                        <br>
-
-                        <h3 class="text-center">Cadernação</h3>
-                        <textarea name="cadernacao" id="editor3" cols="30" rows="10">
-                            <?=$livro_em_edicao["cadernacao"]?>
-                        </textarea>
-                        <br>
-
                         <input type="hidden" name="id" value="<?=$id?>">
                         <input type="submit" class="mt-3" value="Editar!!"></button>
                     </form>
@@ -156,33 +139,27 @@
 
                         <h3 class="text-center">Imagem das Cartas [Home]</h3>
                         <div>
-                            <input type="text" name="imagem_cartas">
+                            <input type="text" name="imagem_cartas" placeholder="Insira aqui o link da imagem">
                             <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
                         </div>
                    
                         <br>
                         <h3 class="text-center">Imagem dos Livros [Página do Livro]</h3>
                         <div>
-                            <input type="text" name="imagem_livros">
+                            <input type="text" name="imagem_livros" placeholder="Insira aqui o link da imagem">
                             <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
                         </div>
                         
                         <br>
                         <h3 class="text-center">Título</h3>
-                        <input type="text" name="titulo">
+                        <input type="text" name="titulo" placeholder="Insira o texto aqui">
                         <br>
                         <h3 class="text-center">Categoria</h3>
-                        <input type="text" name="categoria">
+                        <input type="text" name="categoria" placeholder="Insira o texto aqui">
                         <br>
                         <h3 class="text-center">Descrição do Livro</h3>
-                        <textarea name="descricao" id="editor1" cols="60" rows="2"></textarea>
+                        <textarea name="descricao" id="editor1" cols="60" rows="2" placeholder="Insira o texto aqui"></textarea>
                         <br>
-                        <h3 class="text-center">Sinopse da Carta</h3>
-                        <textarea name="sinopse" id="editor2" cols="30" rows="10"></textarea>
-                        <br>
-                        <h3 class="text-center">Cadernação</h3>
-                        <textarea name="cadernacao" id="editor3" cols="60" rows="4"></textarea>
-
 
                         <input type="hidden" name="inserir_confirmacao" value="true">
                         <input type="submit" class="mt-3" value="Criar!"></button>

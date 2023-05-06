@@ -1,7 +1,5 @@
 <?php
-    require_once("../php/config.php");
-    require_once("../php/base_dados.php");
-    require_once("../php/funcoes.php");
+    require_once("../controllers/requisitos.php");
 
     $form = isset($_POST["email"]) && isset($_POST["senha"]);
 
@@ -10,7 +8,7 @@
         $user_found = logar_criptografia($_POST["email"], $_POST["senha"]);
 
         if(empty($user_found)){
-            header("Location: backoffice.php?credencial=incorreto");
+            header("Location: ../backoffice.php?credenciais=incorreto");
             exit();
             
         } else{
@@ -24,7 +22,7 @@
         }
     
     } else{
-        header("Location: index.html?credencial=vazio");
+        header("Location: ../backoffice.phpl?credencial=vazio");
         exit();
     }
 

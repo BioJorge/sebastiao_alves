@@ -2,5 +2,5 @@
     session_start();
     session_destroy();
 
-    header("Location: backoffice.php");
+    header("Location: http://localhost/sebastiao_alves/backoffice.php");
 ?>

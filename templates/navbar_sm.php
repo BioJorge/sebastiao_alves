@@ -1,3 +1,14 @@
+<?php
+    $lista_livros = selectSQL("SELECT * FROM livros ORDER BY id ASC");
+    $url_index = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/";
+    $url_home = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/index.php";
+    $url_autor = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/autor.php";
+    $url_contactos = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/contactos.php";
+    $url_imprensa = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/imprensa.php";
+    $url_livros = 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/livros.php";
+
+    $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+?>
 <!--Navbar pequena-->
 
 <nav class="navbar_pequena navbar p-0 m-0" id="navbar_pequena">

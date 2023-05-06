@@ -1,8 +1,5 @@
 <?php
-    require_once("../php/config.php");
-    require_once("../php/base_dados.php");
-    require_once("../php/funcoes.php");
-    require_once("../php/globais.php");
+    require_once("../controllers/requisitos.php");
 
 
     session_start();
@@ -34,7 +31,7 @@
         <!-- CSS do Bootstrap 5.3-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <!--CSS proprio-->
-        <link rel="stylesheet" href="style/backoffice-logado.css">
+        <link rel="stylesheet" href="public/backoffice-logado.css">
     </head>
 
     <body>
@@ -136,7 +133,7 @@
                 </p>
                 <div class="patrocinio d-flex justify-content-center align-items-center gap-3 col-6 mt-2">
                     <span class=" d-none d-md-block">Powered by CodeMaster:</span>
-                    <img src="../imagens_para_site/desktop/incode.png" alt="">
+                    <img src="../public/imagens/incode.png" alt="">
                 </div>
             </div>
         </footer>

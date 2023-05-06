@@ -1,9 +1,5 @@
 <?php
-    require_once("../../php/config.php");
-    require_once("../../php/base_dados.php");
-    require_once("../../php/funcoes.php");
-    require_once("../../php/globais.php");
-
+    require_once("../../controllers/requisitos.php");
 
     session_start();
     if(!isset($_SESSION["user"])){
@@ -30,9 +26,12 @@
     if(isset($_GET["id_destaque"]) && isset($_GET["id_livro"])){
         $id_destaque = $_GET["id_destaque"];
         $id_livro = $_GET["id_livro"];
+        $categoria = $_GET["categoria"];
+    
         $data = date("H:i:s - d/m/Y");
 
         iduSQL("UPDATE destaques SET id_livro='$id_livro', data_atualizacao='$data' WHERE id='$id_destaque'");
+        iduSQL("UPDATE livros SET categoria='$categoria', data_atualizacao='$data' WHERE id='$id_destaque'");
 
         header("Location: ../backoffice-logado.php");
         exit();
@@ -55,7 +54,7 @@
         <!-- CSS do Bootstrap 5.3-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <!--CSS proprio-->
-        <link rel="stylesheet" href="../style/backoffice-logado.css">
+        <link rel="stylesheet" href="../public/backoffice-logado.css">
     </head>
 
     <body>
@@ -81,6 +80,8 @@
                                 </option>
                                 <?php endforeach; ?>
                             </select>
+                            <h3 class="text-center">Texto dos destaques</h3>
+                            <input type="text" name="categoria" value="<?=getLivroById($id)["categoria"]?>">
                         <br>
 
                         <input type="hidden" name="id_destaque" value="<?=$id?>">

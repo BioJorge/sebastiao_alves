@@ -1,10 +1,5 @@
-
-
 <?php
-    require_once("../../php/config.php");
-    require_once("../../php/base_dados.php");
-    require_once("../../php/funcoes.php");
-    require_once("../../php/globais.php");
+    require_once("../../controllers/requisitos.php");
 
 
     session_start();
@@ -29,19 +24,8 @@
     if(isset($_GET["id"])){
         $id = $_GET["id"];
         $data = date("H:i:s - d/m/Y");
-        if(!empty($_GET["caixa_titulo"])){
-            iduSQL("UPDATE home SET caixa_titulo='$_GET[caixa_titulo]', data_atualizacao='$data' WHERE id='$id'");
 
-        }
-        if(!empty($_GET["caixa_paragrafo"])){
-            iduSQL("UPDATE home SET caixa_paragrafo='$_GET[caixa_paragrafo]', data_atualizacao='$data' WHERE id='$id'");
-
-        }
-        if(!empty($_GET["ultimos_livros_paragrafo"])){
-            iduSQL("UPDATE home SET ultimos_livros_paragrafo='$_GET[ultimos_livros_paragrafo]', data_atualizacao='$data' WHERE id='$id'");
-
-        }
-       
+        iduSQL("UPDATE home SET imagem='$_GET[imagem]', ultimos_livros_paragrafo='$_GET[ultimos_livros_paragrafo]', data_atualizacao='$data' WHERE id='$id'");
 
         header("Location: ../backoffice-logado.php");
         exit();
@@ -64,7 +48,7 @@
         <!-- CSS do Bootstrap 5.3-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <!--CSS proprio-->
-        <link rel="stylesheet" href="../style/backoffice-logado.css">
+        <link rel="stylesheet" href="../public/backoffice-logado.css">
         <!-- editor ckeditor5 -->
         <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
     </head>
@@ -84,16 +68,10 @@
             <div class="container opcoes_edicao flex-column d-flex justify-content-center align-items-center mt-3">
                 <form action="" meh3od="GET" id="formulario" class="d-flex flex-column align-items-center">
 
-                    <h3 class="text-center">Título da caixa de introdução</h3>
-                    <input type="text" name="caixa_titulo" value="<?=$home["caixa_titulo"]?>">
+                    <h3 class="text-center">Imagem</h3>
+                    <input type="text" name="imagem" value="<?=$home["imagem"]?>">
                     <br>
-
-                    <h3 class="text-center">Parágrafo da caixa de introdução</h3>
-                    <textarea name="caixa_paragrafo" id="editor1" cols="30" rows="10">
-                        <?=$home["caixa_paragrafo"]?>
-                    </textarea>
                 
-                    <br>
                     <h3 class="text-center">Parágrafo da caixa dos últimos livros</h3>
                     <textarea name="ultimos_livros_paragrafo" id="editor2" cols="30" rows="10">
                         <?=$home["ultimos_livros_paragrafo"]?>
