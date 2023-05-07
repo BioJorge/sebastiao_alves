@@ -8,6 +8,7 @@
             <th class="text-center">Título</th>
             <th class="text-center">Categoria</th>
             <th class="text-center">Sinopse</th>
+            <th class="text-center">Link</th>
             <th class="text-center">Data de atualização</th>
             <th class="text-center">Ações</th>
         </tr>
@@ -29,6 +30,9 @@
                     </td>
                     <td>
                         <?=$lc["sinopse"]?>
+                    </td>
+                    <td>
+                        <?=$lc["link"]?>
                     </td>
                     <td>
                         <?=$lc["data_atualizacao"]?>

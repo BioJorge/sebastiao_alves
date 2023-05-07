@@ -10,7 +10,7 @@
         $user = $_SESSION["user"];
     }
 
-    $form = isset($_GET["editar"]) || isset($_GET["deletar"]) || isset($_GET["id"]) || isset($_GET["inserir"]) || isset($_GET["inserir_confirmacao"]);
+    $form = isset($_GET["editar"]) || isset($_GET["deletar"]) || isset($_GET["id"]) || isset($_GET["inserir"]) || isset($_GET["inserir_confirmacao"]) || isset($_GET["deletar_confirmacao"]);
     if($form){
         
         if(isset($_GET["editar"])){
@@ -33,7 +33,7 @@
         $id = $_GET["id"];
         $data = date("H:i:s - d/m/Y");
 
-        iduSQL("UPDATE carousel SET imagem_sm='$_GET[imagem_sm]', imagem_lg='$_GET[imagem_lg]', titulo='$_GET[titulo]', categoria='$_GET[categoria]', sinopse='$_GET[sinopse]', data_atualizacao='$data' WHERE id='$id'");
+        iduSQL("UPDATE carousel SET imagem_sm='$_GET[imagem_sm]', imagem_lg='$_GET[imagem_lg]', titulo='$_GET[titulo]', categoria='$_GET[categoria]', sinopse='$_GET[sinopse]', link='$_GET[link]', data_atualizacao='$data' WHERE id='$id'");
 
         header("Location: ../backoffice-logado.php");
         exit();
@@ -41,7 +41,7 @@
     if(isset($_GET["inserir_confirmacao"])){
         $data = date("H:i:s - d/m/Y");
 
-        iduSQL("INSERT INTO carousel (imagem_lg, imagem_sm, categoria, titulo, sinopse, data_atualizacao) VALUES ('$_GET[imagem_lg]','$_GET[imagem_sm]', '$_GET[categoria]', '$_GET[titulo]', '$_GET[sinopse]', '$data')");
+        iduSQL("INSERT INTO carousel (imagem_lg, imagem_sm, categoria, titulo, sinopse, link, data_atualizacao) VALUES ('$_GET[imagem_lg]','$_GET[imagem_sm]', '$_GET[categoria]', '$_GET[titulo]', '$_GET[sinopse]', '$_GET[link]','$data')");
 
         header("Location: ../backoffice-logado.php");
         exit();
@@ -49,7 +49,7 @@
 
     //delecao
     if(isset($_GET["deletar_confirmacao"])){
-        iduSQL("DELETE FROM carousel WHERE id='$_GET[deletar]'");
+        iduSQL("DELETE FROM carousel WHERE id='$_GET[deletar_confirmacao]'");
         header("Location: ../backoffice-logado.php");
         exit();
     }
@@ -119,6 +119,10 @@
                         </textarea>
                         <br>
 
+                        <h3 class="text-center">Link do "Saber Mais"</h3>
+                        <input type="text" name="link" value="<?=$carousel_em_edicao["link"]?>">
+                        <br>
+
                         <input type="hidden" name="id" value="<?=$id?>">
                         <input type="submit" class="mt-3" value="Editar!!"></button>
                     </form>
@@ -149,6 +153,10 @@
                         <h3>Sinopse</h3>
                         <textarea name="sinopse" id="editor1" cols="60" rows="4">
                         </textarea>
+
+                        <h3 class="text-center">Link do "Saber Mais"</h3>
+                        <input type="text" name="link">
+                        <br>
 
                         <input type="hidden" name="inserir_confirmacao" value="true">
                         <input type="submit" class="mt-3" value="Criar!"></button>
