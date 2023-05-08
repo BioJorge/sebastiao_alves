@@ -49,9 +49,10 @@
                     </div>
 
                     <div class="col-12 redes-sociais d-flex justify-content-center">
-                        <button id="instagram"></button>
-                        <button id="facebook"></button>
-                        <button id="linkedin"></button>
+                        <a href="https://www.instagram.com/"><button id="instagram"></button></a>
+                        <a href="https://www.facebook.com/"><button id="facebook"></button></a>
+                        <a href="https://www.linkedin.com/in/jorge-carlos-sousa-filho-5310861a3/"><button id="linkedin"></button></a>
+                        <a href="https://www.github.com/BioJorge/"><button id="github"></button></a>                        
                     </div>
 
                     <div class="col-12 d-flex d-md-none justify-content-center" id="seguranca_consumidor">

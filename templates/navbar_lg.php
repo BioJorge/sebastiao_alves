@@ -26,7 +26,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?=($actual_link == $url_imprensa) ? "active" : ""?>" href="imprensa.php">Imprensa</a>
+                        <a class="nav-link <?=(strpos("$actual_link", "$url_imprensa") !== false) ? "active" : "" ?>" href="imprensa.php">Imprensa</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?=($actual_link == $url_contactos) ? "active" : ""?>" href="contactos.php">Contactos</a>

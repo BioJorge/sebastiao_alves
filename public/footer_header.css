@@ -259,11 +259,11 @@ footer{
     margin-top: 30px;
     gap: 20px;
 }
-.redes-sociais > button{
-    padding: 0px;
-    text-align: center;
+.redes-sociais > a > button{
     height: 37px;
     width: 37px;
+    padding: 0px;
+    text-align: center;
     border: none;
     outline: none;
     background-size: cover;
@@ -286,6 +286,12 @@ footer{
 }
 #linkedin:hover{
     background-image: url("../public/imagens/linkedin2.svg");
+}
+#github{
+    background-image: url("../public/imagens/github-medium.png");
+}
+#github:hover{
+    background-image: url("../public/imagens/github.png");
 }
 #livro_reclamacoes{
     width: 77px;
@@ -488,8 +494,8 @@ footer{
         justify-content: center;
         align-items: center;
     }
-    .redes-sociais > a{
-        margin-left: 25px;
+    .redes-sociais{
+        gap: 25px;
     }
     #ralc, #livro_reclamacoes{
         margin-top: 64px;
