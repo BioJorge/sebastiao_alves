@@ -1,3 +1,8 @@
+let focus = document.getElementById("focus");
+focus.scrollIntoView();
+
+
+
 //menu do mobile
 function mostrarMenu(button, elementId) {
     var element = document.getElementById(elementId);
@@ -15,12 +20,17 @@ function mostrarMenu(button, elementId) {
     }
   }
 
-const info_extra = window.document.getElementById("info_extra");
-const botao_ver_mais = window.document.getElementById("ver_mais");
+
 ver_mais.addEventListener('click', function(){
+  const info_extra = window.document.getElementById("info_extra");
+  const botao_ver_mais = window.document.getElementById("ver_mais");
+
   info_extra.style.display = "block";
   botao_ver_mais.style.display = "none";
 })
+
+
+
 
 
 

@@ -2,6 +2,18 @@
     date_default_timezone_set("Europe/Lisbon");
 
     //stackoverflow - https://stackoverflow.com/questions/965235/how-can-i-truncate-a-string-to-the-first-20-words-in-php
+    
+    function existeSessao(){
+        session_start();
+        
+        if(!isset($_SESSION["user"])){
+            header("Location: backoffice.php");
+            exit();
+        } else{
+            $user = $_SESSION["user"];
+        }
+    }
+    
     function limit_text($text, $limit) {
         if (str_word_count($text, 0) > $limit) {
             $words = str_word_count($text, 2);

@@ -23,7 +23,7 @@
 ?>  
 
 
-<main class="container-fluid p-0 m-0">
+<main class="container-fluid p-0 m-0" id="focus">
     <!--Apresentacao para imprensa-->
     <div class="col welcome p-0 m-0 col-12 col-md-11">
         <h5 class="title2">impresa</h5>

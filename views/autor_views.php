@@ -2,7 +2,7 @@
     $autor = selectSQLUnico("SELECT * FROM autor ORDER BY id ASC");
 ?>
 
-<main class="container-fluid p-0">
+<main class="container-fluid p-0" id="focus">
     <!--Apresentacao do autor-->
     <div class="welcome p-0 m-0 col-lg-11 col-12">
         <h5 class="title2">Autor</h5>
@@ -16,7 +16,7 @@
             <?=$autor["sobre_autor"]?>
         </p>
         <button class="p-0" id="ver_mais"></button>
-        <a href="index.php" class="align-self-start" id="voltar_atras"></a>
+        <button class="align-self-start" id="voltar_atras" onclick="history.back()"></button>
         
     </div>
     

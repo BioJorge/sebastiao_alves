@@ -1,6 +1,14 @@
 <?php
     require_once("../../controllers/requisitos.php");
 
+    session_start();
+    if(!isset($_SESSION["user"])){
+        header("Location: index.php");
+        exit();
+    } else{
+        $user = $_SESSION["user"];
+    }
+
     $form = isset($_GET["senha_digitada"]) && isset($_GET["nova_senha"]) && isset($_GET["senha_confirmacao"]) && isset($_GET["id"]); 
     if($form){
         $id = $_GET["id"];

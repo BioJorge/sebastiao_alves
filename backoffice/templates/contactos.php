@@ -21,6 +21,12 @@
     </p>
     <hr class="border border-light w-100">
 
+    <h3 class="text-center">Horário</h3>
+    <p>
+        <?=$contactos["horario"]?>
+    </p>
+    <hr class="border border-light w-100">
+
     <h3 class="text-center">Data de atualização</h3>
     <p>
         <?=$contactos["data_atualizacao"]?> 

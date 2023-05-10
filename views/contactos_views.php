@@ -2,7 +2,7 @@
     $contactos = selectSQLUnico("SELECT * FROM contactos ORDER BY id ASC");
 ?>
 
-<main class="container-fluid p-0">
+<main class="container-fluid p-0" id="focus">
     <!--Apresentacao para contactos-->
     <div class="col welcome p-0 m-0 col-12 col-lg-11">
         <h5 class="title2">Contactos</h5>

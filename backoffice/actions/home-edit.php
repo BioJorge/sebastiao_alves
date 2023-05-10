@@ -10,7 +10,6 @@
         $user = $_SESSION["user"];
     }
 
-
     $form = isset($_GET["editar"]) || isset($_GET["id"]);
     if($form){
         if(isset($_GET["editar"])){

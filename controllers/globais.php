@@ -11,4 +11,6 @@
     $imprensas = selectSQL("SELECT * FROM imprensa ORDER BY id ASC");
     $lista_acessos = selectSQL("SELECT * FROM acessos ORDER BY id ASC");
 
+    $user;
+
 ?>

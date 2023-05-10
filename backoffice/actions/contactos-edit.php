@@ -10,7 +10,6 @@
         $user = $_SESSION["user"];
     }
 
-
     $form = isset($_GET["editar"]) || isset($_GET["id"]);
     if($form){
         if(isset($_GET["editar"])){
@@ -24,22 +23,9 @@
     if(isset($_GET["id"])){
         $id = $_GET["id"];
         $data = date("H:i:s - d/m/Y");
-        if(!empty($_GET["morada"])){
-            iduSQL("UPDATE contactos SET morada='$_GET[morada]', data_atualizacao='$data' WHERE id='$id'");
 
-        }
-        if(!empty($_GET["email"])){
-            iduSQL("UPDATE contactos SET email='$_GET[email]', data_atualizacao='$data' WHERE id='$id'");
+        iduSQL("UPDATE contactos SET morada='$_GET[morada]', email='$_GET[email]', telemovel='$_GET[telemovel]', horario='$_GET[horario]', data_atualizacao='$data' WHERE id='$id'");
 
-        }
-        if(!empty($_GET["telemovel"])){
-            iduSQL("UPDATE contactos SET telemovel='$_GET[telemovel]', data_atualizacao='$data' WHERE id='$id'");
-        }
-        if(!empty($_GET["horario"])){
-            iduSQL("UPDATE contactos SET horario='$_GET[horario]', data_atualizacao='$data' WHERE id='$id'");
-
-        }
-       
         header("Location: ../backoffice-logado.php");
         exit();
         
