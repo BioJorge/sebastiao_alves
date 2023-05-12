@@ -89,7 +89,7 @@
                         <h3 class="text-center">Imagem</h3>
                         <div>
                             <input type="text" name="imagem" value="<?=$imprensa_em_edicao["imagem"]?>" name="imagem_sm">
-                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                            <a href="" target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                         </div>
                         <br>
 
@@ -118,19 +118,19 @@
 
                         <h3>Imagem</h3>
                         <div>
-                            <input type="text" name="imagem">
-                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                            <input type="text" name="imagem" placeholder="Insira o link da imagem aqui">
+                            <a href="" target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                         </div>
                         <br>
 
                         <h3>Título</h3>
-                        <textarea name="titulo" id="" cols="60" rows="2"></textarea>
+                        <textarea name="titulo" id="" cols="60" rows="2" placeholder="Insira o texto aqui"></textarea>
                         
                         <h3>Descricao</h3>
-                        <textarea name="descricao" id="editor1" cols="30" rows="10"></textarea>
+                        <textarea name="descricao" id="editor1" cols="30" rows="10" placeholder="Insira o texto aqui"></textarea>
 
                         <h3>Data de publicação</h3>
-                        <textarea name="data_publicacao" id="" cols="60" rows="2"></textarea>
+                        <textarea name="data_publicacao" id="" cols="60" rows="2" placeholder="Insira o texto aqui"></textarea>
 
                         <input type="hidden" name="inserir_confirmacao" value="true">
                         <input type="submit" class="mt-3" value="Criar!"></button>

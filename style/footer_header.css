@@ -291,10 +291,12 @@ footer{
     width: 77px;
     height: 31px;
     margin-right: 44px;
+    cursor: pointer;
 }
 #ralc{
     width: 125px;
     height: 29px;
+    cursor: pointer;
 }
 .copyright{
     margin-top: 88px;

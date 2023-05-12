@@ -1,6 +1,6 @@
 
  <!--Carousel lg-->
-<div id="carouselExampleCaptions" class="carousel slide d-none d-sm-block col-12" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide d-none d-sm-block col-12" data-bs-ride="carousel" id="carousel_grande">
     <div class="carousel-indicators col-6 col-sm-5 col-md-4 d-flex flex-start">
         <?php foreach($lista_carousel as $chave => $l): ?>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?=$chave?>"  class="<?= ($chave == 0) ? "active" : ""?>" aria-current="<?= ($chave == 0) ? "true" : "" ?>" aria-label="Slide <?=($chave+1)?>">

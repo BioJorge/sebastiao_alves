@@ -68,7 +68,10 @@
                 <form action="" meh3od="GET" id="formulario" class="d-flex flex-column align-items-center">
 
                     <h3 class="text-center">Imagem</h3>
-                    <input type="text" name="imagem" value="<?=$home["imagem"]?>">
+                    <div>
+                        <input type="text" name="imagem" value="<?=$home["imagem"]?>">
+                        <a href="" target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
+                    </div>
                     <br>
                 
                     <h3 class="text-center">Parágrafo da caixa dos últimos livros</h3>

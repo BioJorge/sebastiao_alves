@@ -77,7 +77,7 @@
                     <h3 class="text-center">Imagem</h3>
                     <div>
                         <input type="text" name="imagem" value="<?=$autor_edicao["imagem"]?>">
-                        <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                        <a href="" target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                     </div>
                     <br>
 

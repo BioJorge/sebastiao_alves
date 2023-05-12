@@ -94,14 +94,14 @@
                         <h3 class="text-center">Imagem_sm</h3>
                         <div>
                             <input type="text" name="imagem_sm" value="<?=$carousel_em_edicao["imagem_sm"]?>" name="imagem_sm">
-                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                            <a target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                         </div>
                         <br>
 
                         <h3 class="text-center">Imagem_lg</h3>
                         <div>
                             <input type="text" name="imagem_lg" value="<?=$carousel_em_edicao["imagem_lg"]?>" name="imagem_lg">
-                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                            <a target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                         </div>
                         <br>
 
@@ -134,28 +134,28 @@
 
                         <h3>Imagem_sm</h3>
                         <div>
-                            <input type="text" name="imagem_sm">
-                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                            <input type="text" name="imagem_sm" placeholder="Insira o link da imagem aqui aqui">
+                            <a target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                         </div>
 
                         <h3>Imagem_lg</h3>
                         <div>
-                            <input type="text" name="imagem_lg">
-                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                            <input type="text" name="imagem_lg" placeholder="Insira o link da imagem aqui aqui">
+                            <a target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                         </div>
 
                         <h3>Título</h3>
-                        <textarea name="titulo" id="" cols="60" rows="2"></textarea>
+                        <textarea name="titulo" id="" cols="60" rows="2" placeholder="Insira o texto aqui"></textarea>
                         
                         <h3>Categoria</h3>
-                        <textarea name="categoria" id="" cols="60" rows="2"></textarea>
+                        <textarea name="categoria" id="" cols="60" rows="2" placeholder="Insira o texto aqui"></textarea>
 
                         <h3>Sinopse</h3>
-                        <textarea name="sinopse" id="editor1" cols="60" rows="4">
+                        <textarea name="sinopse" id="editor1" cols="60" rows="4" placeholder="Insira o texto aqui">
                         </textarea>
 
                         <h3 class="text-center">Link do "Saber Mais"</h3>
-                        <input type="text" name="link">
+                        <input type="text" name="link" placeholder="Insira o link aqui">
                         <br>
 
                         <input type="hidden" name="inserir_confirmacao" value="true">

@@ -18,7 +18,7 @@ function mostrarMenu(button, elementId) {
     } else {
       button.style.backgroundImage = 'url("public/imagens/menu.svg")';
     }
-  }
+  };
 
 
 ver_mais.addEventListener('click', function(){
@@ -27,7 +27,18 @@ ver_mais.addEventListener('click', function(){
 
   info_extra.style.display = "block";
   botao_ver_mais.style.display = "none";
-})
+});
+
+
+function abrirLivros(){
+  $("#botao_navbar_sm").dropdown("toggle");
+}
+
+function aguarde(){
+  setTimeout(abrirLivros, 250);
+}
+
+
 
 
 

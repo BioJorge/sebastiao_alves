@@ -16,7 +16,7 @@
                                                 nesse caso, estou pedindo para ver se existe 'https://'. $_SERVER['HTTP_HOST'] . "/sebastiao_alves/livros.php" na url atual
                                                 IPC: tem que ser !== false, porque a posição pode ser 0, o que seria interpretado como falso tbm, e vai dar bug
                                             -->
-                        <a class="nav-link <?= (strpos("$actual_link", "$url_livros") !== false) ? "active" : "" ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a id="botao_navbar_sm" class="nav-link <?= (strpos("$actual_link", "$url_livros") !== false) ? "active" : "" ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Livros
                         </a>
                         <ul class="dropdown-menu">

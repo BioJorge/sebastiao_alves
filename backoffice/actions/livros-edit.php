@@ -103,14 +103,14 @@
                         <h3 class="text-center">Imagem das Cartas [Home]</h3>
                         <div>
                             <input type="text" name="imagem_cartas" value="<?=$livro_em_edicao["imagem_cartas"]?>">
-                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                            <a href="" target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                         </div>
                         <br>
 
                         <h3 class="text-center">Imagem dos Livros [Página do Livro]</h3>
                         <div>
                             <input type="text" name="imagem_livros" value="<?=$livro_em_edicao["imagem_livros"]?>">
-                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                            <a href="" target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                         </div>
                         <br>
 
@@ -140,14 +140,14 @@
                         <h3 class="text-center">Imagem das Cartas [Home]</h3>
                         <div>
                             <input type="text" name="imagem_cartas" placeholder="Insira aqui o link da imagem">
-                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                            <a href="" target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                         </div>
                    
                         <br>
                         <h3 class="text-center">Imagem dos Livros [Página do Livro]</h3>
                         <div>
                             <input type="text" name="imagem_livros" placeholder="Insira aqui o link da imagem">
-                            <a href="../../tinyfilemanager.php" target="_blank"><button>Buscar imagem</button></a>
+                            <a href="" target="popup" onclick="window.open('../../tinyfilemanager.php', 'newwindow', 'width=800, height=600'); return false;"><button>Buscar imagem</button></a>
                         </div>
                         
                         <br>

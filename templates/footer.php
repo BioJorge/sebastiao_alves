@@ -9,7 +9,7 @@
         <nav class="footer-nav d-none d-md-flex justify-content-center">    
             <a class="nav-link <?=($actual_link == $url_home || $actual_link == $url_index) ? "active" : ""?>" aria-current="page" href="index.php">Home</a>
             <a class="nav-link <?=($actual_link == $url_autor) ? "active" : ""?>" href="autor.php">Autor</a>
-            <a class="nav-link <?= (strpos("$actual_link", "$url_livros") !== false) ? "active" : "" ?>" href="livros.php?livro=1" role="button" data-bs-toggle="dropdown" aria-expanded="false">Livros</a>
+            <a class="nav-link <?= (strpos("$actual_link", "$url_livros") !== false) ? "active" : "" ?>" href="#" role="button"  aria-expanded="false" onclick="aguarde()">Livros</a>
             <a class="nav-link <?=($actual_link == $url_imprensa) ? "active" : ""?>" href="imprensa.php">Imprensa</a>
             <a class="nav-link <?=($actual_link == $url_contactos) ? "active" : ""?>" href="contactos.php">Contactos</a>
         </nav>
@@ -56,8 +56,8 @@
                     </div>
 
                     <div class="col-12 d-flex d-md-none justify-content-center" id="seguranca_consumidor">
-                        <img id="livro_reclamacoes" src="imagens_para_site/desktop/livroreclamacoes.svg" alt="livroreclamacao">
-                        <img id="ralc" src="imagens_para_site/desktop/ralc.svg" alt="ralc">
+                        <img id="livro_reclamacoes" alt="livroreclamacao">
+                        <img id="ralc" alt="ralc">
                     </div>
                 
                     <div class="col-12 text-center copyright">
