@@ -10,7 +10,8 @@
         $user = $_SESSION["user"];
     }
 
-    $form = isset($_GET["editar"]) || isset($_GET["deletar"]) || isset($_GET["id"]) || isset($_GET["inserir"]) || isset($_GET["inserir_confirmacao"]);
+    $form = isset($_GET["editar"]) || isset($_GET["deletar"]) || isset($_GET["id"]) || isset($_GET["inserir"]) || isset($_GET["inserir_confirmacao"]) || isset($_GET["deletar_confirmacao"]);
+
     if($form){
         
         if(isset($_GET["editar"])){
@@ -18,11 +19,10 @@
             $id = $_GET["editar"];
             $imprensa_em_edicao = selectSQLUnico("SELECT * FROM imprensa WHERE id='$id'");
 
-            //deleção direta
+            //confirmar deleção
         } elseif(isset($_GET["deletar"])){
-            iduSQL("DELETE FROM imprensa WHERE id='$_GET[deletar]'");
-            header("Location: ../backoffice-logado.php");
-            exit();
+            $id = $_GET["deletar"];
+            $imprensa_em_delecao = selectSQLUnico("SELECT * FROM imprensa WHERE id='$id'");
         }
     } else{
         header("Location: ../backoffice-logado.php");
@@ -48,6 +48,13 @@
         header("Location: ../backoffice-logado.php");
         exit();
     } 
+
+    //delecao
+    if(isset($_GET["deletar_confirmacao"])){
+        iduSQL("DELETE FROM imprensa WHERE id='$_GET[deletar_confirmacao]'");
+        header("Location: ../backoffice-logado.php");
+        exit();
+    }
 
 
 ?>
@@ -110,9 +117,8 @@
                         <input type="hidden" name="id" value="<?=$id?>">
                         <input type="submit" class="mt-3" value="Editar!!"></button>
                     </form>
-                <?php endif; ?>
 
-                <?php if(isset($_GET["inserir"])): ?>
+                <?php elseif(isset($_GET["inserir"])): ?>
 
                     <form action="imprensa-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
 
@@ -135,7 +141,36 @@
                         <input type="hidden" name="inserir_confirmacao" value="true">
                         <input type="submit" class="mt-3" value="Criar!"></button>
                     </form>
+
+                <?php elseif(isset($_GET["deletar"])): ?>
+
+                    <form action="imprensa-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
+
+                        <table>
+
+                            <tr>
+                                <th class="text-center">Imagem</th>
+                                <th class="text-center">Título</th>
+                                <th class="text-center">Descricao</th>
+                                <th class="text-center">Data de publicação</th>
+                            </tr>
+                            <tr>
+                                <td><img src="<?=(strpos("$imprensa_em_delecao[imagem]", "uploads") !== false) ? "" : "../../"?><?=$imprensa_em_delecao["imagem"]?>" alt=""></td>
+                                <td><?=$imprensa_em_delecao["titulo"]?></td>
+                                <td><?=$imprensa_em_delecao["descricao"]?></td>
+                                <td><?=$imprensa_em_delecao["data_publicacao"]?></td>
+                            </tr>
+                        </table>
+
+                            <h3>Tem certezas que desejas  eliminar esse item do carousel?</h3>
+
+                            <input type="hidden" name="deletar_confirmacao" value="<?=$id?>">
+                            <input type="submit" class="my-3" value="SIM!"></button>
+                            <a href="../backoffice-logado.php" class="my-5 botoes"></a>
+                    </form>
+
                 <?php endif; ?>
+                
             
             
             </div>

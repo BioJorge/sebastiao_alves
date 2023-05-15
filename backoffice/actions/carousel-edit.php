@@ -126,9 +126,8 @@
                         <input type="hidden" name="id" value="<?=$id?>">
                         <input type="submit" class="mt-3" value="Editar!!"></button>
                     </form>
-                <?php endif; ?>
 
-                <?php if(isset($_GET["inserir"])): ?>
+                <?php elseif(isset($_GET["inserir"])): ?>
 
                     <form action="carousel-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
 
@@ -161,10 +160,8 @@
                         <input type="hidden" name="inserir_confirmacao" value="true">
                         <input type="submit" class="mt-3" value="Criar!"></button>
                     </form>
-                <?php endif; ?>
 
-                
-                <?php if(isset($_GET["deletar"])): ?>
+                <?php elseif(isset($_GET["deletar"])): ?>
                     <form action="carousel-edit.php" method="GET" id="formulario" class="flex-column d-flex justify-content-center align-items-center">
 
                     <table>
@@ -178,8 +175,8 @@
                             <th class="text-center">Link</th>
                         </tr>
                         <tr>
-                            <td class="img_livro"><img src="../../<?=$carousel_em_delecao["imagem_sm"]?>" alt=""></td>
-                            <td class="img_livro"><img src="../../<?=$carousel_em_delecao["imagem_lg"]?>" alt=""></td>
+                            <td class="img_livro"><img src="<?=(strpos("$carousel_em_delecao[imagem_sm]", "uploads") !== false) ? "" : "../../"?><?=$carousel_em_delecao["imagem_sm"]?>" alt=""></td>
+                            <td class="img_livro"><img src="<?=(strpos("$carousel_em_delecao[imagem_lg]", "uploads") !== false) ? "" : "../../"?><?=$carousel_em_delecao["imagem_lg"]?>" alt=""></td>
                             <td><?=$carousel_em_delecao["titulo"]?></td>
                             <td><?=$carousel_em_delecao["categoria"]?></td>
                             <td><?=$carousel_em_delecao["sinopse"]?></td>
